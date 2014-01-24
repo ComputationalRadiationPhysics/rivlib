@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="API">
+      <UniqueIdentifier>{79a7e612-eb56-4314-94ab-804844a56a82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API\Header Files">
+      <UniqueIdentifier>{c441ad20-3654-4873-90e1-4604c8c70ebb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API\Source Files">
+      <UniqueIdentifier>{ad82b05e-91cb-45d5-ab6e-258e0a419355}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Implementation">
+      <UniqueIdentifier>{d0750131-a12f-4dae-959a-8de72d85bdb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Implementation\Header Files">
+      <UniqueIdentifier>{76205f56-371c-4c07-9c3d-38d02ba781ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Implementation\Source Files">
+      <UniqueIdentifier>{73026502-9754-4072-811f-f4f3b2c7c989}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="jni">
+      <UniqueIdentifier>{b0de7ede-9d1b-4e83-a442-7864b0788cda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="jni\Header Files">
+      <UniqueIdentifier>{7e364827-775e-4c42-bfc6-837eeec0988a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="jni\Source Files">
+      <UniqueIdentifier>{17c607bd-a4ba-44bc-a676-2f95e03251ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="encoder">
+      <UniqueIdentifier>{c44ec5c8-c02f-4123-8929-00f39e45ddb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="encoder\Header Files">
+      <UniqueIdentifier>{af8aae9b-582e-442b-8711-5633ba799356}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="encoder\Source Files">
+      <UniqueIdentifier>{8eeca707-6479-4c05-97d3-4fd2388d496b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data">
+      <UniqueIdentifier>{d8b2fcf4-1782-483a-b7f4-b16e054b8951}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data\Header Files">
+      <UniqueIdentifier>{73b7fe57-cedc-451b-a88b-0fd1d1128a26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data\Source Files">
+      <UniqueIdentifier>{11d482a1-508a-4fa3-b117-b4e6502328b4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\rivlib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api\image_data_binding.cpp">
+      <Filter>API\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api\ip_communicator.cpp">
+      <Filter>API\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api\provider.cpp">
+      <Filter>API\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api\raw_image_data_binding.cpp">
+      <Filter>API\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api\vicci_middleware_broker.cpp">
+      <Filter>API\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api\broker.cpp">
+      <Filter>API\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api\communicator.cpp">
+      <Filter>API\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api\control_connection.cpp">
+      <Filter>API\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api\core.cpp">
+      <Filter>API\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api\data_binding.cpp">
+      <Filter>API\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\node.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api\node_base.cpp">
+      <Filter>API\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api\api_ptr_base.cpp">
+      <Filter>API\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api_impl\core_impl.cpp">
+      <Filter>API Implementation\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api_impl\provider_impl.cpp">
+      <Filter>API Implementation\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\element_node.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api_impl\raw_image_data_binding_impl.cpp">
+      <Filter>API Implementation\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api_impl\ip_communicator_impl.cpp">
+      <Filter>API Implementation\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\error_log.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api_impl\control_connection_impl.cpp">
+      <Filter>API Implementation\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ip_connection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api\simple_console_broker.cpp">
+      <Filter>API\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api_impl\simple_console_broker_impl.cpp">
+      <Filter>API Implementation\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\abstract_queued_broker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\thread_scrubber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api_impl\vicci_middleware_broker_impl.cpp">
+      <Filter>API Implementation\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jni\java_vm_config.cpp">
+      <Filter>jni\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jni\java_vm.cpp">
+      <Filter>jni\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\data_channel_info.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api\connection_base.cpp">
+      <Filter>API\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\connection_base_impl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api\image_stream_connection.cpp">
+      <Filter>API\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api_impl\image_stream_connection_impl.cpp">
+      <Filter>API Implementation\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\uri_utility.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\encoder\image_encoder_rgb_raw.cpp">
+      <Filter>encoder\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\encoder\image_encoder_base.cpp">
+      <Filter>encoder\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\data\buffer.cpp">
+      <Filter>data\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\data\slot.cpp">
+      <Filter>data\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\encoder\image_request.cpp">
+      <Filter>encoder\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\encoder\image_encoder_rgb_zip.cpp">
+      <Filter>encoder\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rivlib\config.h">
+      <Filter>API\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rivlib\control_connection.h">
+      <Filter>API\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rivlib\core.h">
+      <Filter>API\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rivlib\data_binding.h">
+      <Filter>API\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rivlib\image_data_binding.h">
+      <Filter>API\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rivlib\image_data_types.h">
+      <Filter>API\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rivlib\ip_communicator.h">
+      <Filter>API\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rivlib\provider.h">
+      <Filter>API\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rivlib\raw_image_data_binding.h">
+      <Filter>API\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rivlib\rivlib.h">
+      <Filter>API\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rivlib\vicci_middleware_broker.h">
+      <Filter>API\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rivlib\broker.h">
+      <Filter>API\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rivlib\common.h">
+      <Filter>API\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rivlib\communicator.h">
+      <Filter>API\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\node.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rivlib\api_ptr.h">
+      <Filter>API\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rivlib\api_ptr_base.h">
+      <Filter>API\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rivlib\node_base.h">
+      <Filter>API\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\api_impl\core_impl.h">
+      <Filter>API Implementation\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\api_impl\provider_impl.h">
+      <Filter>API Implementation\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\element_node.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\api_impl\raw_image_data_binding_impl.h">
+      <Filter>API Implementation\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\api_impl\ip_communicator_impl.h">
+      <Filter>API Implementation\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\error_log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\api_impl\control_connection_impl.h">
+      <Filter>API Implementation\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ip_connection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rivlib\simple_console_broker.h">
+      <Filter>API\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\api_impl\simple_console_broker_impl.h">
+      <Filter>API Implementation\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\abstract_queued_broker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\thread_scrubber.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\api_impl\vicci_middleware_broker_impl.h">
+      <Filter>API Implementation\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\jni\java_vm_config.h">
+      <Filter>jni\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\jni\java_vm.h">
+      <Filter>jni\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rivlib\ip_utilities.h">
+      <Filter>API\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\data_channel_info.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rivlib\connection_base.h">
+      <Filter>API\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\connection_base_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rivlib\image_stream_connection.h">
+      <Filter>API\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\api_impl\image_stream_connection_impl.h">
+      <Filter>API Implementation\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\uri_utility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\encoder\image_encoder_rgb_raw.h">
+      <Filter>encoder\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\encoder\image_encoder_base.h">
+      <Filter>encoder\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rivlib\version.h">
+      <Filter>API\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\data\buffer.h">
+      <Filter>data\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\data\slot.h">
+      <Filter>data\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\data\buffer_type.h">
+      <Filter>data\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\message_image_request.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\encoder\image_request.h">
+      <Filter>encoder\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\data\image_buffer_metadata.h">
+      <Filter>data\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\encoder\image_encoder_rgb_zip.h">
+      <Filter>encoder\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\version.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

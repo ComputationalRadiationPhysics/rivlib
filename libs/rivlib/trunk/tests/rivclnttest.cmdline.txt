@@ -1,0 +1,3 @@
+-ch "riv://localhost:52000/riv%20test"
+-ch "riv://141.76.68.162:52000/riv%20test"
+-ch "riv://neoklassik:51234/test%20friend"

@@ -1,0 +1,3 @@
+--noviccisemiwa
+-n "test friend" --noviccisemiwa --ipcommport 51234
+-n "Franz" --viccihost 192.168.1.100 5222 --jniclasspath "D:\dev\android\workspace\eu.vicci.semiwa.device.publisher\bin" --jniclasspath D:\dev\android\workspace\eu.vicci.semiwa.libs\lib\*.jar --ipcommport 51234

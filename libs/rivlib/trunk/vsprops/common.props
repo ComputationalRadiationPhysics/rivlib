@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)bin\win$(Bits)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)obj\win$(Bits)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(thelibpath)thelib++\include\;$(vislibpath)base\include\;$(vislibpath)sys\include\;$(vislibpath)net\include\;$(vislibpath)math\include\;$(vislibpath)graphics\include\;$(vislibpath)gl\include\;$(visglutpath)include\;$(anttweakbarpath)include\;$(zlibpath)include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(thelibpath)thelib++\lib\win$(Bits)\$(Configuration)\;$(vislibpath)lib\;$(visglutpath)lib\;$(anttweakbarpath)lib\;$(zlibpath)lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>

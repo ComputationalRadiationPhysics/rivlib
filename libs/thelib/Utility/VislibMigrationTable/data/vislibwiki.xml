@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Entry vislibProject="base" vislibFile="vislib\assert.h" theFile="the\assert.h" comment="Note that ASSERT() has been renamed to THE_ASSERT()" />
+  <Entry vislibProject="base" vislibFile="vislib\deprecated.h" theFile="the\deprecated.h" />
+  <Entry vislibProject="base" vislibFile="vislib\forceinline.h" theFile="the\force_inline.h" />
+  <Entry vislibProject="base" vislibFile="vislib\functioncast.h" theFile="the\function_cast.h" />
+  <Entry vislibProject="base" vislibFile="vislib\memutils.h" theFile="the\memory.h" />
+  <Entry vislibProject="base" vislibFile="vislib\tchar.h" theFile="the\tchar.h" />
+  <Entry vislibProject="base" vislibFile="vislib\types.h" theFile="the\types.h" />
+  <Entry vislibProject="base" vislibFile="vislib\unreferenced.h" theFile="the\unreferenced.h" />
+  <Entry vislibProject="base" vislibFile="vislib\utils.h" theFile="the\utils.h" />
+  <Entry vislibProject="base" vislibFile="vislib\vislibsymbolimportexport.inl" theFile="the\thelibsymbolimportexport.inl" />
+  <Entry vislibProject="base" vislibFile="vislib\vislibversion.h" />
+  <Entry vislibProject="base" vislibFile="vislib\xmlUtils.h" theClass="the::text::string_utility" theFile="the\text\string_utility.h" comment="[[VisLibStringMigration]]" />
+  <Entry vislibProject="d3d" vislibFile="vislib\d3dutils.h" />
+  <Entry vislibProject="d3d" vislibFile="vislib\d3dverify.h" />
+  <Entry vislibProject="gl" vislibFile="vislib\glfunctions.h" />
+  <Entry vislibProject="gl" vislibFile="vislib\glverify.h" />
+  <Entry vislibProject="gl" vislibFile="vislib\Verdana.inc" />
+  <Entry vislibProject="graphics" vislibFile="vislib\graphicsfunctions.h" />
+  <Entry vislibProject="graphics" vislibFile="vislib\graphicstypes.h" />
+  <Entry vislibProject="ibcomm" vislibFile="vislib\IbvCommChannel.h" />
+  <Entry vislibProject="ibcomm" vislibFile="vislib\IbvCommServerChannel.h" />
+  <Entry vislibProject="ibcomm" vislibFile="vislib\IbvShared.h" />
+  <Entry vislibProject="math" vislibFile="vislib\mathfunctions.h" theFile="the\math\functions.h" />
+  <Entry vislibProject="math" vislibFile="vislib\mathtypes.h" theFile="the\math\types.h" />
+  <Entry vislibProject="math" vislibFile="vislib\pcautils.h" theFile="the\math\pcautils.h" />
+  <Entry vislibProject="sys" vislibFile="vislib\DirectoryIterator.inl" />
+  <Entry vislibProject="sys" vislibFile="vislib\error.h" comment="Superseded by the::system::system_message::get_last_error()" />
+  <Entry vislibProject="sys" vislibFile="vislib\LinuxDaemon.h" />
+  <Entry vislibProject="sys" vislibFile="vislib\sysfunctions.h" />
+  <Entry vislibProject="sys" vislibFile="vislib\WindowsService.inl" />
+  <Entry vislibClass="vislib::AlreadyExistsException" vislibProject="base" vislibFile="vislib\AlreadyExistsException.h" theClass="the::already_exists_exception" theFile="the\already_exists_exception.h" />
+  <Entry vislibClass="vislib::Array" vislibProject="base" vislibFile="vislib\Array.h" theClass="the::collections::array" theFile="the\collections\array.h" />
+  <Entry vislibClass="vislib::ArrayAllocator" vislibProject="base" vislibFile="vislib\ArrayAllocator.h" theClass="the::array_allocator" theFile="the\array_allocator.h" />
+  <Entry vislibClass="vislib::ArrayElementDftCtor" vislibProject="base" vislibFile="vislib\ArrayElementDftCtor.h" theClass="the::collections::array_element_dft_ctor" theFile="the\collections\array_element_dft_ctor.h" />
+  <Entry vislibClass="vislib::ArrayElementPtrCtor" vislibProject="base" vislibFile="vislib\ArrayElementPtrCtor.h" theClass="the::collections::array_element_ptr_ctor" theFile="the\collections\array_element_ptr_ctor" />
+  <Entry vislibClass="vislib::AssociativeCollection" vislibProject="base" vislibFile="vislib\AssociativeCollection.h" comment="Colllection polymorphism is not supported any more. Use templating." />
+  <Entry vislibClass="vislib::CharTraits" vislibProject="base" vislibFile="vislib\CharTraits.h" theClass="the::text::char_utility" theFile="the\text\char_utility.h" comment="[[VisLibStringMigration]]" />
+  <Entry vislibClass="vislib::CharTraitsBase" vislibProject="base" vislibFile="vislib\CharTraits.h" theClass="the::text::char_utility" theFile="the\text\char_utility.h" comment="[[VisLibStringMigration]]" />
+  <Entry vislibClass="vislib::Collection" vislibProject="base" vislibFile="vislib\Collection.h" theClass="the::collections::collection" theFile="the\collections\collection.h" comment="Colllection polymorphism is not supported any more. Use templating." />
+  <Entry vislibClass="vislib::ColumnFormatter" vislibProject="base" vislibFile="vislib\ColumnFormatter.h" />
+  <Entry vislibClass="vislib::ConstIterator" vislibProject="base" vislibFile="vislib\ConstIterator.h" theClass="the::collections::const_enumerator" theFile="the\collections\const_enumerator.h" />
+  <Entry vislibClass="vislib::Delegate" vislibProject="base" vislibFile="vislib\Delegate.h" theClass="the::delegate" theFile="the\delegate.h" comment="Replace by STL?" />
+  <Entry vislibClass="vislib::Exception" vislibProject="base" vislibFile="vislib\Exception.h" theClass="the::exception" theFile="the\exception.h" />
+  <Entry vislibClass="vislib::FormatException" vislibProject="base" vislibFile="vislib\FormatException.h" theClass="the::format_exception" theFile="the\format_exception.h" />
+  <Entry vislibClass="vislib::graphics::AbsoluteCursor3D" vislibProject="graphics" vislibFile="vislib\AbsoluteCursor3D.h" />
+  <Entry vislibClass="vislib::graphics::AbstractBitmapCodec" vislibProject="graphics" vislibFile="vislib\AbstractBitmapCodec.h" />
+  <Entry vislibClass="vislib::graphics::AbstractCameraController" vislibProject="graphics" vislibFile="vislib\AbstractCameraController.h" />
+  <Entry vislibClass="vislib::graphics::AbstractCursor" vislibProject="graphics" vislibFile="vislib\AbstractCursor.h" />
+  <Entry vislibClass="vislib::graphics::AbstractCursor2DEvent" vislibProject="graphics" vislibFile="vislib\AbstractCursor2DEvent.h" />
+  <Entry vislibClass="vislib::graphics::AbstractCursor3DEvent" vislibProject="graphics" vislibFile="vislib\AbstractCursor3DEvent.h" />
+  <Entry vislibClass="vislib::graphics::AbstractCursorEvent" vislibProject="graphics" vislibFile="vislib\AbstractCursorEvent.h" />
+  <Entry vislibClass="vislib::graphics::AbstractFont" vislibProject="graphics" vislibFile="vislib\AbstractFont.h" />
+  <Entry vislibClass="vislib::graphics::AbstractVISLogo" vislibProject="graphics" vislibFile="vislib\AbstractVISLogo.h" />
+  <Entry vislibClass="vislib::graphics::BitmapCodecCollection" vislibProject="graphics" vislibFile="vislib\BitmapCodecCollection.h" />
+  <Entry vislibClass="vislib::graphics::BitmapImage" vislibProject="graphics" vislibFile="vislib\BitmapImage.h" />
+  <Entry vislibClass="vislib::graphics::BitmapImage::Extension" vislibProject="graphics" vislibFile="vislib\BitmapImage.h" />
+  <Entry vislibClass="vislib::graphics::BitmapPainter" vislibProject="graphics" vislibFile="vislib\BitmapPainter.h" />
+  <Entry vislibClass="vislib::graphics::BmpBitmapCodec" vislibProject="graphics" vislibFile="vislib\BmpBitmapCodec.h" />
+  <Entry vislibClass="vislib::graphics::Camera" vislibProject="graphics" vislibFile="vislib\Camera.h" />
+  <Entry vislibClass="vislib::graphics::CameraAdjust3D" vislibProject="graphics" vislibFile="vislib\CameraAdjust3D.h" />
+  <Entry vislibClass="vislib::graphics::CameraLookAtDist" vislibProject="graphics" vislibFile="vislib\CameraLookAtDist.h" />
+  <Entry vislibClass="vislib::graphics::CameraMove2D" vislibProject="graphics" vislibFile="vislib\CameraMove2D.h" />
+  <Entry vislibClass="vislib::graphics::CameraParameterLimits" vislibProject="graphics" vislibFile="vislib\CameraParameterLimits.h" />
+  <Entry vislibClass="vislib::graphics::CameraParameterObserver" vislibProject="graphics" vislibFile="vislib\CameraParameterObserver.h" />
+  <Entry vislibClass="vislib::graphics::CameraParameters" vislibProject="graphics" vislibFile="vislib\CameraParameters.h" />
+  <Entry vislibClass="vislib::graphics::CameraParamsEyeOverride" vislibProject="graphics" vislibFile="vislib\CameraParamsEyeOverride.h" />
+  <Entry vislibClass="vislib::graphics::CameraParamsOverride" vislibProject="graphics" vislibFile="vislib\CameraParamsOverride.h" />
+  <Entry vislibClass="vislib::graphics::CameraParamsStore" vislibProject="graphics" vislibFile="vislib\CameraParamsStore.h" />
+  <Entry vislibClass="vislib::graphics::CameraParamsTileRectOverride" vislibProject="graphics" vislibFile="vislib\CameraParamsTileRectOverride.h" />
+  <Entry vislibClass="vislib::graphics::CameraParamsVirtualViewOverride" vislibProject="graphics" vislibFile="vislib\CameraParamsVirtualViewOverride.h" />
+  <Entry vislibClass="vislib::graphics::CameraRotate2D" vislibProject="graphics" vislibFile="vislib\CameraRotate2D.h" />
+  <Entry vislibClass="vislib::graphics::CameraRotate2DEulerLookAt" vislibProject="graphics" vislibFile="vislib\CameraRotate2DEulerLookAt.h" />
+  <Entry vislibClass="vislib::graphics::CameraRotate2DLookAt" vislibProject="graphics" vislibFile="vislib\CameraRotate2DLookAt.h" />
+  <Entry vislibClass="vislib::graphics::CameraZoom2DAngle" vislibProject="graphics" vislibFile="vislib\CameraZoom2DAngle.h" />
+  <Entry vislibClass="vislib::graphics::CameraZoom2DMove" vislibProject="graphics" vislibFile="vislib\CameraZoom2DMove.h" />
+  <Entry vislibClass="vislib::graphics::ColourParser" vislibProject="graphics" vislibFile="vislib\ColourParser.h" />
+  <Entry vislibClass="vislib::graphics::ColourRGBAu8" vislibProject="graphics" vislibFile="vislib\ColourRGBAu8.h" />
+  <Entry vislibClass="vislib::graphics::Cursor2D" vislibProject="graphics" vislibFile="vislib\Cursor2D.h" />
+  <Entry vislibClass="vislib::graphics::Cursor2DRectLasso" vislibProject="graphics" vislibFile="vislib\Cursor2DRectLasso.h" />
+  <Entry vislibClass="vislib::graphics::d3d::AbstractD3DAdapterInformation" vislibProject="d3d" vislibFile="vislib\AbstractD3DAdapterInformation.h" />
+  <Entry vislibClass="vislib::graphics::d3d::D3D9AdapterInformation" vislibProject="d3d" vislibFile="vislib\D3D9AdapterInformation.h" comment="Direct3D 9 is not supported any more." />
+  <Entry vislibClass="vislib::graphics::d3d::D3DCamera" vislibProject="d3d" vislibFile="vislib\D3DCamera.h" />
+  <Entry vislibClass="vislib::graphics::d3d::D3DException" vislibProject="d3d" vislibFile="vislib\D3DException.h" theClass="the::system::com_exception" theFile="the\system\com_exception.h" comment="Direct3D now uses the generic com_exception." />
+  <Entry vislibClass="vislib::graphics::d3d::D3DMatrix" vislibProject="d3d" vislibFile="vislib\D3DMatrix.h" />
+  <Entry vislibClass="vislib::graphics::d3d::D3DPoint3D" vislibProject="d3d" vislibFile="vislib\D3DPoint3D.h" />
+  <Entry vislibClass="vislib::graphics::d3d::D3DVector3D" vislibProject="d3d" vislibFile="vislib\D3DVector3D.h" />
+  <Entry vislibClass="vislib::graphics::d3d::D3DVISLogo" vislibProject="d3d" vislibFile="vislib\D3DVISLogo.h" />
+  <Entry vislibClass="vislib::graphics::FpsCounter" vislibProject="graphics" vislibFile="vislib\FpsCounter.h" />
+  <Entry vislibClass="vislib::graphics::gl::AbstractOpenGLShader" vislibProject="gl" vislibFile="vislib\AbstractOpenGLShader.h" />
+  <Entry vislibClass="vislib::graphics::gl::AbstractOpenGLShader::CompileException" vislibProject="gl" vislibFile="vislib\AbstractOpenGLShader.h" />
+  <Entry vislibClass="vislib::graphics::gl::AbstractOpenGLTexture" vislibProject="gl" vislibFile="vislib\AbstractOpenGLTexture.h" />
+  <Entry vislibClass="vislib::graphics::gl::ARBShader" vislibProject="gl" vislibFile="vislib\ARBShader.h" comment="ARB shaders have been deprecated." />
+  <Entry vislibClass="vislib::graphics::gl::CameraOpenGL" vislibProject="gl" vislibFile="vislib\CameraOpenGL.h" />
+  <Entry vislibClass="vislib::graphics::gl::ExtensionsDependent" vislibProject="gl" vislibFile="vislib\ExtensionsDependent.h" />
+  <Entry vislibClass="vislib::graphics::gl::FramebufferObject" vislibProject="gl" vislibFile="vislib\FramebufferObject.h" />
+  <Entry vislibClass="vislib::graphics::gl::FramebufferObject::ColourAttachParams_t" vislibProject="gl" vislibFile="vislib\FramebufferObject.h" />
+  <Entry vislibClass="vislib::graphics::gl::FramebufferObject::DepthAttachParams_t" vislibProject="gl" vislibFile="vislib\FramebufferObject.h" />
+  <Entry vislibClass="vislib::graphics::gl::FramebufferObject::StencilAttachParams_t" vislibProject="gl" vislibFile="vislib\FramebufferObject.h" />
+  <Entry vislibClass="vislib::graphics::gl::GLSLGeometryShader" vislibProject="gl" vislibFile="vislib\GLSLGeometryShader.h" />
+  <Entry vislibClass="vislib::graphics::gl::GLSLShader" vislibProject="gl" vislibFile="vislib\GLSLShader.h" />
+  <Entry vislibClass="vislib::graphics::gl::GlutMouseInteractionAdapter" vislibProject="gl" vislibFile="vislib\GlutMouseInteractionAdapter.h" />
+  <Entry vislibClass="vislib::graphics::gl::OpenGLException" vislibProject="gl" vislibFile="vislib\OpenGLException.h" />
+  <Entry vislibClass="vislib::graphics::gl::OpenGLTexture2D" vislibProject="gl" vislibFile="vislib\OpenGLTexture2D.h" />
+  <Entry vislibClass="vislib::graphics::gl::OpenGLVISLogo" vislibProject="gl" vislibFile="vislib\OpenGLVISLogo.h" />
+  <Entry vislibClass="vislib::graphics::gl::OutlineFont" vislibProject="gl" vislibFile="vislib\OutlineFont.h" />
+  <Entry vislibClass="vislib::graphics::gl::ShaderSource" vislibProject="gl" vislibFile="vislib\ShaderSource.h" />
+  <Entry vislibClass="vislib::graphics::gl::ShaderSource::Snippet" vislibProject="gl" vislibFile="vislib\ShaderSource.h" />
+  <Entry vislibClass="vislib::graphics::gl::ShaderSource::StringSnippet" vislibProject="gl" vislibFile="vislib\ShaderSource.h" />
+  <Entry vislibClass="vislib::graphics::gl::ShaderSource::VersionSnippet" vislibProject="gl" vislibFile="vislib\ShaderSource.h" />
+  <Entry vislibClass="vislib::graphics::gl::SimpleFont" vislibProject="gl" vislibFile="vislib\SimpleFont.h" />
+  <Entry vislibClass="vislib::graphics::InputModifiers" vislibProject="graphics" vislibFile="vislib\InputModifiers.h" />
+  <Entry vislibClass="vislib::graphics::InputModifiers::Observer" vislibProject="graphics" vislibFile="vislib\InputModifiers.h" />
+  <Entry vislibClass="vislib::graphics::MouseInteractionAdapter" vislibProject="graphics" vislibFile="vislib\MouseInteractionAdapter.h" />
+  <Entry vislibClass="vislib::graphics::NamedColours" vislibProject="graphics" vislibFile="vislib\NamedColours.h" />
+  <Entry vislibClass="vislib::graphics::ObservableCameraParams" vislibProject="graphics" vislibFile="vislib\ObservableCameraParams.h" />
+  <Entry vislibClass="vislib::graphics::PpmBitmapCodec" vislibProject="graphics" vislibFile="vislib\PpmBitmapCodec.h" />
+  <Entry vislibClass="vislib::graphics::RelativeCursor3D" vislibProject="graphics" vislibFile="vislib\RelativeCursor3D.h" />
+  <Entry vislibClass="vislib::graphics::ZoomToRectangle" vislibProject="graphics" vislibFile="vislib\ZoomToRectangle.h" />
+  <Entry vislibClass="vislib::GUID" vislibProject="base" vislibFile="vislib\GUID.h" theClass="the::guid" theFile="the\guid.h" />
+  <Entry vislibClass="vislib::HashAlgorithm" vislibProject="base" vislibFile="vislib\HashAlgorithm.h" />
+  <Entry vislibClass="vislib::Heap" vislibProject="base" vislibFile="vislib\Heap.h" theClass="the::collections::heap" theFile="the\collections\heap.h" />
+  <Entry vislibClass="vislib::IllegalParamException" vislibProject="base" vislibFile="vislib\IllegalParamException.h" theClass="the::argument_exception" theFile="the\argument_exception.h" />
+  <Entry vislibClass="vislib::IllegalStateException" vislibProject="base" vislibFile="vislib\IllegalStateException.h" theClass="the::invalid_operation_exception" theFile="the\invalid_operation_exception.h" />
+  <Entry vislibClass="vislib::Iterator" vislibProject="base" vislibFile="vislib\Iterator.h" theClass="the::collections::enumerator" theFile="the\collections\enumerator.h" />
+  <Entry vislibClass="vislib::Listenable" vislibProject="base" vislibFile="vislib\Listenable.h" />
+  <Entry vislibClass="vislib::Map" vislibProject="base" vislibFile="vislib\Map.h" comment="use STL now: std::map" />
+  <Entry vislibClass="vislib::math::AbstractCuboid" vislibProject="math" vislibFile="vislib\AbstractCuboid.h" />
+  <Entry vislibClass="vislib::math::AbstractDimension" vislibProject="math" vislibFile="vislib\AbstractDimension.h" theClass="the::math::abstract_size" theFile="the\math\abstract_size.h" />
+  <Entry vislibClass="vislib::math::AbstractDimensionImpl" vislibProject="math" vislibFile="vislib\AbstractDimensionImpl.h" theClass="the::math::abstract_size_impl" theFile="the\math\abstract_size_impl.h" />
+  <Entry vislibClass="vislib::math::AbstractMatrix" vislibProject="math" vislibFile="vislib\AbstractMatrix.h" theClass="the::math::abstract_matrix" theFile="the\math\abstract_matrix.h" />
+  <Entry vislibClass="vislib::math::AbstractMatrixImpl" vislibProject="math" vislibFile="vislib\AbstractMatrixImpl.h" theClass="the::math::abstract_matrix_impl" theFile="the\math\abstract_matrix_impl.h" />
+  <Entry vislibClass="vislib::math::AbstractPlane" vislibProject="math" vislibFile="vislib\AbstractPlane.h" />
+  <Entry vislibClass="vislib::math::AbstractPoint" vislibProject="math" vislibFile="vislib\AbstractPoint.h" theClass="the::math::abstract_point" theFile="the\math\abstract_point.h" />
+  <Entry vislibClass="vislib::math::AbstractPointImpl" vislibProject="math" vislibFile="vislib\AbstractPointImpl.h" theClass="the::math::abstract_point_impl" theFile="the\math\abstract_point_impl.h" />
+  <Entry vislibClass="vislib::math::AbstractPolynom" vislibProject="math" vislibFile="vislib\AbstractPolynom.h" theClass="the::math::abstract_polynom" theFile="the\math\abstract_polynom.h" />
+  <Entry vislibClass="vislib::math::AbstractPolynomImpl" vislibProject="math" vislibFile="vislib\AbstractPolynomImpl.h" theClass="the::math::abstract_polynom_impl" theFile="the\math\abstract_polynom_impl.h" />
+  <Entry vislibClass="vislib::math::AbstractPyramidalFrustum" vislibProject="math" vislibFile="vislib\AbstractPyramidalFrustum.h" />
+  <Entry vislibClass="vislib::math::AbstractQuaternion" vislibProject="math" vislibFile="vislib\AbstractQuaternion.h" theClass="the::math::abstract_quaternion" theFile="the\math\abstract_quaternion.h" />
+  <Entry vislibClass="vislib::math::AbstractRectangle" vislibProject="math" vislibFile="vislib\AbstractRectangle.h" theClass="the::math::abstract_rectangle" theFile="the\math\abstract_rectangle.h" />
+  <Entry vislibClass="vislib::math::AbstractRectangularPyramidalFrustum" vislibProject="math" vislibFile="vislib\AbstractRectangularPyramidalFrustum.h" />
+  <Entry vislibClass="vislib::math::AbstractSphere" vislibProject="math" vislibFile="vislib\AbstractSphere.h" />
+  <Entry vislibClass="vislib::math::AbstractTriangle" vislibProject="math" vislibFile="vislib\AbstractTriangle.h" />
+  <Entry vislibClass="vislib::math::AbstractTriangleImpl" vislibProject="math" vislibFile="vislib\AbstractTriangleImpl.h" />
+  <Entry vislibClass="vislib::math::AbstractVector" vislibProject="math" vislibFile="vislib\AbstractVector.h" theClass="the::math::abstract_vector" theFile="the\math\abstract_vector.h" />
+  <Entry vislibClass="vislib::math::AbstractVectorImpl" vislibProject="math" vislibFile="vislib\AbstractVectorImpl.h" theClass="the::math::abstract_vector_impl" theFile="the\math\abstract_vector_impl.h" />
+  <Entry vislibClass="vislib::math::AbstractViewFrustum" vislibProject="math" vislibFile="vislib\AbstractViewFrustum.h" />
+  <Entry vislibClass="vislib::math::BezierCurve" vislibProject="math" vislibFile="vislib\BezierCurve.h" />
+  <Entry vislibClass="vislib::math::Cuboid" vislibProject="math" vislibFile="vislib\Cuboid.h" />
+  <Entry vislibClass="vislib::math::Dimension" vislibProject="math" vislibFile="vislib\Dimension.h" theClass="the::math::size" theFile="the\math\size.h" />
+  <Entry vislibClass="vislib::math::FastMap" vislibProject="math" vislibFile="vislib\FastMap.h" />
+  <Entry vislibClass="vislib::math::Float16" vislibProject="math" vislibFile="vislib\Float16.h" />
+  <Entry vislibClass="vislib::math::ForceDirected" vislibProject="math" vislibFile="vislib\ForceDirected.h" />
+  <Entry vislibClass="vislib::math::Matrix" vislibProject="math" vislibFile="vislib\Matrix.h" theClass="the::math::matrix" theFile="the\math\matrix.h" />
+  <Entry vislibClass="vislib::math::Matrix4" vislibProject="math" vislibFile="vislib\Matrix4.h" comment="deprecated" />
+  <Entry vislibClass="vislib::math::Plane" vislibProject="math" vislibFile="vislib\Plane.h" />
+  <Entry vislibClass="vislib::math::Point" vislibProject="math" vislibFile="vislib\Point.h" theClass="the::math::point" theFile="the\math\point.h" />
+  <Entry vislibClass="vislib::math::Polynom" vislibProject="math" vislibFile="vislib\Polynom.h" theClass="the::math::polynom" theFile="the\math\polynom.h" />
+  <Entry vislibClass="vislib::math::Quaternion" vislibProject="math" vislibFile="vislib\Quaternion.h" theClass="the::math::quaternion" theFile="the\math\quaternion.h" />
+  <Entry vislibClass="vislib::math::Rectangle" vislibProject="math" vislibFile="vislib\Rectangle.h" theClass="the::math::rectangle" theFile="the\math\rectangle.h" />
+  <Entry vislibClass="vislib::math::RectangularPyramidalFrustum" vislibProject="math" vislibFile="vislib\RectangularPyramidalFrustum.h" />
+  <Entry vislibClass="vislib::math::ShallowDimension" vislibProject="math" vislibFile="vislib\ShallowDimension.h" theClass="the::math::shallow_size" theFile="the\math\shallow_size.h" />
+  <Entry vislibClass="vislib::math::ShallowMatrix" vislibProject="math" vislibFile="vislib\ShallowMatrix.h" theClass="the::math::shallow_martix" theFile="the\math\shallow_matrix.h" />
+  <Entry vislibClass="vislib::math::ShallowPlane" vislibProject="math" vislibFile="vislib\ShallowPlane.h" />
+  <Entry vislibClass="vislib::math::ShallowPoint" vislibProject="math" vislibFile="vislib\ShallowPoint.h" theClass="the::math::shallow_point" theFile="the\math\shallow_point.h" />
+  <Entry vislibClass="vislib::math::ShallowQuaternion" vislibProject="math" vislibFile="vislib\ShallowQuaternion.h" theClass="the::math::shallow_quaternion" theFile="the\math\shallow_quaternion.h" />
+  <Entry vislibClass="vislib::math::ShallowRectangle" vislibProject="math" vislibFile="vislib\ShallowRectangle.h" theClass="the::math::shallow_rectangle" theFile="the\math\shallow_rectangle.h" />
+  <Entry vislibClass="vislib::math::ShallowShallowTriangle" vislibProject="math" vislibFile="vislib\ShallowShallowTriangle.h" />
+  <Entry vislibClass="vislib::math::ShallowSphere" vislibProject="math" vislibFile="vislib\ShallowSphere.h" />
+  <Entry vislibClass="vislib::math::ShallowTriangle" vislibProject="math" vislibFile="vislib\ShallowTriangle.h" />
+  <Entry vislibClass="vislib::math::ShallowVector" vislibProject="math" vislibFile="vislib\ShallowVector.h" theClass="the::math::shallow_vector" theFile="the\math\shallow_vector.h" />
+  <Entry vislibClass="vislib::math::Sphere" vislibProject="math" vislibFile="vislib\Sphere.h" />
+  <Entry vislibClass="vislib::math::Ternary" vislibProject="math" vislibFile="vislib\Ternary.h" />
+  <Entry vislibClass="vislib::math::Triangle" vislibProject="math" vislibFile="vislib\Triangle.h" />
+  <Entry vislibClass="vislib::math::Vector" vislibProject="math" vislibFile="vislib\Vector.h" theClass="the::math::vector" theFile="the\math\vector.h" />
+  <Entry vislibClass="vislib::math::ViewFrustum" vislibProject="math" vislibFile="vislib\ViewFrustum.h" />
+  <Entry vislibClass="vislib::MD5HashProvider" vislibProject="base" vislibFile="vislib\MD5HashProvider.h" />
+  <Entry vislibClass="vislib::MissingImplementationException" vislibProject="base" vislibFile="vislib\MissingImplementationException.h" theClass="the::not_implemented_exception" theFile="the\not_implemented_exception.h" />
+  <Entry vislibClass="vislib::MultiSz" vislibProject="base" vislibFile="vislib\MultiSz.h" />
+  <Entry vislibClass="vislib::net::AbstractCommChannel" vislibProject="net" vislibFile="vislib\AbstractCommChannel.h" />
+  <Entry vislibClass="vislib::net::AbstractCommClientChannel" vislibProject="net" vislibFile="vislib\AbstractCommClientChannel.h" />
+  <Entry vislibClass="vislib::net::AbstractCommEndPoint" vislibProject="net" vislibFile="vislib\AbstractCommEndPoint.h" />
+  <Entry vislibClass="vislib::net::AbstractCommServerChannel" vislibProject="net" vislibFile="vislib\AbstractCommServerChannel.h" />
+  <Entry vislibClass="vislib::net::AbstractSimpleMessage" vislibProject="net" vislibFile="vislib\AbstractSimpleMessage.h" />
+  <Entry vislibClass="vislib::net::AbstractSimpleMessageHeader" vislibProject="net" vislibFile="vislib\AbstractSimpleMessageHeader.h" />
+  <Entry vislibClass="vislib::net::AbstractSyncMsgUser" vislibProject="net" vislibFile="vislib\AbstractSyncMsgUser.h" />
+  <Entry vislibClass="vislib::net::AsyncSocket" vislibProject="net" vislibFile="vislib\AsyncSocket.h" />
+  <Entry vislibClass="vislib::net::AsyncSocketContext" vislibProject="net" vislibFile="vislib\AsyncSocketContext.h" />
+  <Entry vislibClass="vislib::net::AsyncSocketSender" vislibProject="net" vislibFile="vislib\AsyncSocketSender.h" />
+  <Entry vislibClass="vislib::net::cluster::AbstractClientNode" vislibProject="cluster" vislibFile="vislib\AbstractClientNode.h" />
+  <Entry vislibClass="vislib::net::cluster::AbstractClusterNode" vislibProject="cluster" vislibFile="vislib\AbstractClusterNode.h" />
+  <Entry vislibClass="vislib::net::cluster::AbstractControlledNode" vislibProject="cluster" vislibFile="vislib\AbstractControlledNode.h" />
+  <Entry vislibClass="vislib::net::cluster::AbstractControllerNode" vislibProject="cluster" vislibFile="vislib\AbstractControllerNode.h" />
+  <Entry vislibClass="vislib::net::cluster::AbstractServerNode" vislibProject="cluster" vislibFile="vislib\AbstractServerNode.h" />
+  <Entry vislibClass="vislib::net::cluster::BlockHeader_t" vislibProject="cluster" vislibFile="vislib\clustermessages.h" />
+  <Entry vislibClass="vislib::net::cluster::DiscoveryListener" vislibProject="cluster" vislibFile="vislib\DiscoveryListener.h" />
+  <Entry vislibClass="vislib::net::cluster::DiscoveryService" vislibProject="cluster" vislibFile="vislib\DiscoveryService.h" />
+  <Entry vislibClass="vislib::net::cluster::DiscoveryService::DiscoveryConfig" vislibProject="cluster" vislibFile="vislib\DiscoveryService.h" />
+  <Entry vislibClass="vislib::net::cluster::GlutClientNode" vislibProject="clustergl" vislibFile="vislib\GlutClientNode.h" />
+  <Entry vislibClass="vislib::net::cluster::GlutClusterNode" vislibProject="clustergl" vislibFile="vislib\GlutClusterNode.h" />
+  <Entry vislibClass="vislib::net::cluster::GlutServerNode" vislibProject="clustergl" vislibFile="vislib\GlutServerNode.h" />
+  <Entry vislibClass="vislib::net::cluster::MessageHeader_t" vislibProject="cluster" vislibFile="vislib\clustermessages.h" />
+  <Entry vislibClass="vislib::net::cluster::NodeIdentifier" vislibProject="cluster" vislibFile="vislib\NodeIdentifier.h" />
+  <Entry vislibClass="vislib::net::ClusterDiscoveryListener" vislibProject="net" vislibFile="vislib\ClusterDiscoveryListener.h" />
+  <Entry vislibClass="vislib::net::ClusterDiscoveryService" vislibProject="net" vislibFile="vislib\ClusterDiscoveryService.h" />
+  <Entry vislibClass="vislib::net::ClusterDiscoveryService::Message_t" vislibProject="net" vislibFile="vislib\ClusterDiscoveryService.h" />
+  <Entry vislibClass="vislib::net::ClusterDiscoveryService::Receiver" vislibProject="net" vislibFile="vislib\ClusterDiscoveryService.h" />
+  <Entry vislibClass="vislib::net::ClusterDiscoveryService::Sender" vislibProject="net" vislibFile="vislib\ClusterDiscoveryService.h" />
+  <Entry vislibClass="vislib::net::ClusterDiscoveryService::SenderBody_t" vislibProject="net" vislibFile="vislib\ClusterDiscoveryService.h" />
+  <Entry vislibClass="vislib::net::CommServer" vislibProject="net" vislibFile="vislib\CommServer.h" />
+  <Entry vislibClass="vislib::net::CommServer::Configuration_t" vislibProject="net" vislibFile="vislib\CommServer.h" />
+  <Entry vislibClass="vislib::net::CommServerListener" vislibProject="net" vislibFile="vislib\CommServerListener.h" />
+  <Entry vislibClass="vislib::net::DNS" vislibProject="net" vislibFile="vislib\DNS.h" theClass="the::system::net::dns" theFile="the\system\net\dns.h" />
+  <Entry vislibClass="vislib::net::ib::IbRdmaCommClientChannel" vislibProject="ibcomm" vislibFile="vislib\IbRdmaCommClientChannel.h" />
+  <Entry vislibClass="vislib::net::ib::IbRdmaCommServerChannel" vislibProject="ibcomm" vislibFile="vislib\IbRdmaCommServerChannel.h" />
+  <Entry vislibClass="vislib::net::ib::IbRdmaException" vislibProject="ibcomm" vislibFile="vislib\IbRdmaException.h" />
+  <Entry vislibClass="vislib::net::ib::IbvInformation" vislibProject="ibcomm" vislibFile="vislib\IbvInformation.h" />
+  <Entry vislibClass="vislib::net::ib::IbvInformation::Device" vislibProject="ibcomm" vislibFile="vislib\IbvInformation.h" />
+  <Entry vislibClass="vislib::net::ib::IbvInformation::Port" vislibProject="ibcomm" vislibFile="vislib\IbvInformation.h" />
+  <Entry vislibClass="vislib::net::IPAddress" vislibProject="net" vislibFile="vislib\IPAddress.h" theClass="the::system::net::ip_address4" theFile="the\system\net\ip_address4.h" />
+  <Entry vislibClass="vislib::net::IPAddress6" vislibProject="net" vislibFile="vislib\IPAddress6.h" theClass="the::system::net::ip_address6" theFile="the\system\net\ip_address6.h" />
+  <Entry vislibClass="vislib::net::IPAgnosticAddress" vislibProject="net" vislibFile="vislib\IPAgnosticAddress.h" theClass="the::system::net::ip_address" theFile="the\system\net\ip_address.h" />
+  <Entry vislibClass="vislib::net::IPCommEndPoint" vislibProject="net" vislibFile="vislib\IPCommEndPoint.h" />
+  <Entry vislibClass="vislib::net::IPEndPoint" vislibProject="net" vislibFile="vislib\IPEndPoint.h" />
+  <Entry vislibClass="vislib::net::IPHostEntry" vislibProject="net" vislibFile="vislib\IPHostEntry.h" theClass="the::system::net::ip_host_entry" theFile="the\system\net\ip_host_entry.h" comment="Use the::system::net::sip_host_entry whenever possible." />
+  <Entry vislibClass="vislib::net::NetworkInformation" vislibProject="net" vislibFile="vislib\NetworkInformation.h" />
+  <Entry vislibClass="vislib::net::NetworkInformation::Adapter" vislibProject="net" vislibFile="vislib\NetworkInformation.h" />
+  <Entry vislibClass="vislib::net::NetworkInformation::NoConfidenceException" vislibProject="net" vislibFile="vislib\NetworkInformation.h" />
+  <Entry vislibClass="vislib::net::NetworkInformation::UnicastAddressInformation" vislibProject="net" vislibFile="vislib\NetworkInformation.h" />
+  <Entry vislibClass="vislib::net::PeerDisconnectedException" vislibProject="net" vislibFile="vislib\PeerDisconnectedException.h" />
+  <Entry vislibClass="vislib::net::ShallowSimpleMessage" vislibProject="net" vislibFile="vislib\ShallowSimpleMessage.h" />
+  <Entry vislibClass="vislib::net::ShallowSimpleMessageHeader" vislibProject="net" vislibFile="vislib\ShallowSimpleMessageHeader.h" />
+  <Entry vislibClass="vislib::net::SimpleMessage" vislibProject="net" vislibFile="vislib\SimpleMessage.h" />
+  <Entry vislibClass="vislib::net::SimpleMessageDispatcher" vislibProject="net" vislibFile="vislib\SimpleMessageDispatcher.h" />
+  <Entry vislibClass="vislib::net::SimpleMessageDispatcher::Configuration_t" vislibProject="net" vislibFile="vislib\SimpleMessageDispatcher.h" />
+  <Entry vislibClass="vislib::net::SimpleMessageDispatchListener" vislibProject="net" vislibFile="vislib\SimpleMessageDispatchListener.h" />
+  <Entry vislibClass="vislib::net::SimpleMessageHeader" vislibProject="net" vislibFile="vislib\SimpleMessageHeader.h" />
+  <Entry vislibClass="vislib::net::SimpleMessageHeaderData_t" vislibProject="net" vislibFile="vislib\SimpleMessageHeaderData.h" />
+  <Entry vislibClass="vislib::net::Socket" vislibProject="net" vislibFile="vislib\Socket.h" />
+  <Entry vislibClass="vislib::net::SocketAddress" vislibProject="net" vislibFile="vislib\SocketAddress.h" />
+  <Entry vislibClass="vislib::net::SocketException" vislibProject="net" vislibFile="vislib\SocketException.h" theClass="the::system::net::socket_exception" theFile="the\system\net\socket_exception.h" />
+  <Entry vislibClass="vislib::net::TcpCommChannel" vislibProject="net" vislibFile="vislib\TcpCommChannel.h" />
+  <Entry vislibClass="vislib::net::TcpServer" vislibProject="net" vislibFile="vislib\TcpServer.h" />
+  <Entry vislibClass="vislib::net::TcpServer::Listener" vislibProject="net" vislibFile="vislib\TcpServer.h" />
+  <Entry vislibClass="vislib::net::UdpCommChannel" vislibProject="net" vislibFile="vislib\UdpCommChannel.h" />
+  <Entry vislibClass="vislib::net::UnexpectedMessageException" vislibProject="net" vislibFile="vislib\UnexpectedMessageException.h" />
+  <Entry vislibClass="vislib::NoSuchElementException" vislibProject="base" vislibFile="vislib\NoSuchElementException.h" theClass="the::no_such_element_exception" theFile="the\no_such_element_exception.h" />
+  <Entry vislibClass="vislib::NullAllocator" vislibProject="base" vislibFile="vislib\NullAllocator.h" theClass="the::null_allocator" theFile="the\null_allocator.h" />
+  <Entry vislibClass="vislib::NullLockable" vislibProject="base" vislibFile="vislib\NullLockable.h" theClass="the::system::threading::no_nock" theFile="the\system\threading\nol_lock.h" />
+  <Entry vislibClass="vislib::OrderedCollection" vislibProject="base" vislibFile="vislib\OrderedCollection.h" comment="Deprecated" />
+  <Entry vislibClass="vislib::OutOfRangeException" vislibProject="base" vislibFile="vislib\OutOfRangeException.h" theClass="the::out_of_range_exception" theFile="the\index_out_of_range_exception.h" />
+  <Entry vislibClass="vislib::Pair" vislibProject="base" vislibFile="vislib\Pair.h" comment="use STL now: std::pair" />
+  <Entry vislibClass="vislib::PtrArray" vislibProject="base" vislibFile="vislib\PtrArray.h" theClass="the::collections::ptr_array" theFile="the\collections\ptr_array.h" />
+  <Entry vislibClass="vislib::RawStorage" vislibProject="base" vislibFile="vislib\RawStorage.h" theClass="the::blob" theFile="the\blob.h" />
+  <Entry vislibClass="vislib::RawStoragePool" vislibProject="base" vislibFile="vislib\RawStoragePool.h" />
+  <Entry vislibClass="vislib::RawStorageSerialiser" vislibProject="base" vislibFile="vislib\RawStorageSerialiser.h" />
+  <Entry vislibClass="vislib::RawStorageWriter" vislibProject="base" vislibFile="vislib\RawStorageWriter.h" />
+  <Entry vislibClass="vislib::ReferenceCounted" vislibProject="base" vislibFile="vislib\ReferenceCounted.h" theClass="the::reference_counted" theFile="the\reference_counted.h" />
+  <Entry vislibClass="vislib::Serialisable" vislibProject="base" vislibFile="vislib\Serialisable.h" />
+  <Entry vislibClass="vislib::Serialiser" vislibProject="base" vislibFile="vislib\Serialiser.h" />
+  <Entry vislibClass="vislib::SHA1HashProvider" vislibProject="base" vislibFile="vislib\SHA1HashProvider.h" />
+  <Entry vislibClass="vislib::SingleAllocator" vislibProject="base" vislibFile="vislib\SingleAllocator.h" theClass="the::single_allocator" theFile="the\single_allocator.h" />
+  <Entry vislibClass="vislib::SingleLinkedList" vislibProject="base" vislibFile="vislib\SingleLinkedList.h" theClass="the::collections::fast_forward_list" theFile="the\collections\fast_forward_list.h" />
+  <Entry vislibClass="vislib::SmartPtr" vislibProject="base" vislibFile="vislib\SmartPtr.h" comment="use STL now: std::shared_ptr" />
+  <Entry vislibClass="vislib::SmartRef" vislibProject="base" vislibFile="vislib\SmartRef.h" theClass="the::intrusive_ptr" theFile="the\intrusive_ptr.h" />
+  <Entry vislibClass="vislib::Stack" vislibProject="base" vislibFile="vislib\Stack.h" comment="Use STL now: std::stack" />
+  <Entry vislibClass="vislib::StackTrace" vislibProject="base" vislibFile="vislib\StackTrace.h" theClass="the::stack_trace" theFile="the\stack_trace.h" />
+  <Entry vislibClass="vislib::StackTrace::Marker" vislibProject="base" vislibFile="vislib\StackTrace.h" theClass="the::stack_trace::marker" theFile="the\stack_trace.h" comment="Marco renamed to &quot;THE_STACK_TRACE&quot;" />
+  <Entry vislibClass="vislib::String" vislibProject="base" vislibFile="vislib\String.h" theFile="the\string.h" comment="use STL now: [[VisLibStringMigration]]" />
+  <Entry vislibClass="vislib::StringConverter" vislibProject="base" vislibFile="vislib\StringConverter.h" theClass="the::text::string_converter" theFile="the\text\string_converter.h" comment="[[VisLibStringMigration]]" />
+  <Entry vislibClass="vislib::StringSerialiser" vislibProject="base" vislibFile="vislib\StringSerialiser.h" />
+  <Entry vislibClass="vislib::StringTokeniser" vislibProject="base" vislibFile="vislib\StringTokeniser.h" />
+  <Entry vislibClass="vislib::sys::AbstractAsyncContext" vislibProject="sys" vislibFile="vislib\AbstractAsyncContext.h" />
+  <Entry vislibClass="vislib::sys::AbstractReaderWriterLock" vislibProject="sys" vislibFile="vislib\AbstractReaderWriterLock.h" />
+  <Entry vislibClass="vislib::sys::ASCIIFileBuffer" vislibProject="sys" vislibFile="vislib\ASCIIFileBuffer.h" theClass="the::system::io::ascii_file_buffer" theFile="the\system\io\ascii_file_buffer.h" />
+  <Entry vislibClass="vislib::sys::ASCIIFileBuffer::LineBuffer" vislibProject="sys" vislibFile="vislib\ASCIIFileBuffer.h" theClass="the::system::io::ascii_file_buffer::line_buffer" theFile="the\system\io\ascii_file_buffer.h" />
+  <Entry vislibClass="vislib::sys::AutoHandle" vislibProject="sys" vislibFile="vislib\AutoHandle.h" />
+  <Entry vislibClass="vislib::sys::AutoLock" vislibProject="sys" vislibFile="vislib\AutoLock.h" theClass="the::system::threading::auto_lock" theFile="the\system\threading\auto_lock.h" comment="auto_lock via polymorphism will be replaced by auto_lock via templating." />
+  <Entry vislibClass="vislib::sys::BufferedFile" vislibProject="sys" vislibFile="vislib\BufferedFile.h" />
+  <Entry vislibClass="vislib::sys::CmdLineParser" vislibProject="sys" vislibFile="vislib\CmdLineParser.h" />
+  <Entry vislibClass="vislib::sys::CmdLineProvider" vislibProject="sys" vislibFile="vislib\CmdLineProvider.h" theClass="the::system::cmd_line_provider" theFile="the\system\cmd_line_provider.h" />
+  <Entry vislibClass="vislib::sys::COMException" vislibProject="sys" vislibFile="vislib\COMException.h" theClass="the::system::com_exception" theFile="the\system\com_exception.h" />
+  <Entry vislibClass="vislib::sys::Console" vislibProject="sys" vislibFile="vislib\Console.h" />
+  <Entry vislibClass="vislib::sys::Console::ConsoleLogTarget" vislibProject="sys" vislibFile="vislib\Console.h" />
+  <Entry vislibClass="vislib::sys::ConsoleProgressBar" vislibProject="sys" vislibFile="vislib\ConsoleProgressBar.h" />
+  <Entry vislibClass="vislib::sys::CriticalSection" vislibProject="sys" vislibFile="vislib\CriticalSection.h" theClass="the::system::threading::critical_section" theFile="the\system\threading\critical_section.h" comment="auto_lock via polymorphism will be replaced by auto_lock via templating." />
+  <Entry vislibClass="vislib::sys::DateTime" vislibProject="sys" vislibFile="vislib\DateTime.h" comment="Use STL instead, i.e. classes from &lt;chrono&gt;" />
+  <Entry vislibClass="vislib::sys::DateTimeSpan" vislibProject="sys" vislibFile="vislib\DateTimeSpan.h" comment="Use STL instead, i.e. classes from &lt;chrono&gt;" />
+  <Entry vislibClass="vislib::sys::DirectoryEntry" vislibProject="sys" vislibFile="vislib\DirectoryEntry.h" />
+  <Entry vislibClass="vislib::sys::DirectoryIterator" vislibProject="sys" vislibFile="vislib\DirectoryIterator.h" />
+  <Entry vislibClass="vislib::sys::DynamicLinkLibrary" vislibProject="sys" vislibFile="vislib\DynamicLinkLibrary.h" />
+  <Entry vislibClass="vislib::sys::Environment" vislibProject="sys" vislibFile="vislib\Environment.h" />
+  <Entry vislibClass="vislib::sys::Environment::Snapshot" vislibProject="sys" vislibFile="vislib\Environment.h" />
+  <Entry vislibClass="vislib::sys::Event" vislibProject="sys" vislibFile="vislib\Event.h" theClass="the::system::threading::event" theFile="the\system\threading\event.h" />
+  <Entry vislibClass="vislib::sys::FatReaderWriterLock" vislibProject="sys" vislibFile="vislib\FatReaderWriterLock.h" />
+  <Entry vislibClass="vislib::sys::File" vislibProject="sys" vislibFile="vislib\File.h" theClass="the::system::io::file" theFile="the\system\io\file" comment="Not completed yet!" />
+  <Entry vislibClass="vislib::sys::FileNameSequence" vislibProject="sys" vislibFile="vislib\FileNameSequence.h" />
+  <Entry vislibClass="vislib::sys::FileNameSequence::FileNameCountElement" vislibProject="sys" vislibFile="vislib\FileNameSequence.h" />
+  <Entry vislibClass="vislib::sys::FileNameSequence::FileNameElement" vislibProject="sys" vislibFile="vislib\FileNameSequence.h" />
+  <Entry vislibClass="vislib::sys::FileNameSequence::FileNameStringElement" vislibProject="sys" vislibFile="vislib\FileNameSequence.h" />
+  <Entry vislibClass="vislib::sys::ImpersonationContext" vislibProject="sys" vislibFile="vislib\ImpersonationContext.h" />
+  <Entry vislibClass="vislib::sys::Interlocked" vislibProject="sys" vislibFile="vislib\Interlocked.h" comment="Use STL instead, e.g. std::atomic&lt;int&gt;" />
+  <Entry vislibClass="vislib::sys::IOException" vislibProject="sys" vislibFile="vislib\IOException.h" theClass="the::system::io::io_exception" theFile="the\system\io\io_exception.h" />
+  <Entry vislibClass="vislib::sys::IPCSemaphore" vislibProject="sys" vislibFile="vislib\IPCSemaphore.h" theClass="the::system::threading::semaphore" theFile="the\system\threading\semaphore.h" comment="The &quot;normal&quot; semaphore in THElib is named on all platforms." />
+  <Entry vislibClass="vislib::sys::KeyCode" vislibProject="sys" vislibFile="vislib\KeyCode.h" />
+  <Entry vislibClass="vislib::sys::LamportClock" vislibProject="sys" vislibFile="vislib\LamportClock.h" />
+  <Entry vislibClass="vislib::sys::Lockable" vislibProject="sys" vislibFile="vislib\Lockable.h" comment="Lock polymorphism is not supported any more. Use templating." />
+  <Entry vislibClass="vislib::sys::Log" vislibProject="sys" vislibFile="vislib\Log.h" />
+  <Entry vislibClass="vislib::sys::Log::DebugOutputTarget" vislibProject="sys" vislibFile="vislib\Log.h" />
+  <Entry vislibClass="vislib::sys::Log::FileTarget" vislibProject="sys" vislibFile="vislib\Log.h" />
+  <Entry vislibClass="vislib::sys::Log::OfflineTarget" vislibProject="sys" vislibFile="vislib\Log.h" />
+  <Entry vislibClass="vislib::sys::Log::RedirectTarget" vislibProject="sys" vislibFile="vislib\Log.h" />
+  <Entry vislibClass="vislib::sys::Log::StreamTarget" vislibProject="sys" vislibFile="vislib\Log.h" />
+  <Entry vislibClass="vislib::sys::Log::Target" vislibProject="sys" vislibFile="vislib\Log.h" />
+  <Entry vislibClass="vislib::sys::MemmappedFile" vislibProject="sys" vislibFile="vislib\MemmappedFile.h" />
+  <Entry vislibClass="vislib::sys::MemoryFile" vislibProject="sys" vislibFile="vislib\MemoryFile.h" />
+  <Entry vislibClass="vislib::sys::MessageBox" vislibProject="sys" vislibFile="vislib\MessageBox.h" comment="deprecated" />
+  <Entry vislibClass="vislib::sys::Mutex" vislibProject="sys" vislibFile="vislib\Mutex.h" theClass="the::system::threading::mutex" theFile="the\system\threading\mutex.h" comment="auto_lock via polymorphism will be replaced by auto_lock via templating." />
+  <Entry vislibClass="vislib::sys::NamedPipe" vislibProject="sys" vislibFile="vislib\NamedPipe.h" />
+  <Entry vislibClass="vislib::sys::PAMException" vislibProject="sys" vislibFile="vislib\PAMException.h" />
+  <Entry vislibClass="vislib::sys::Path" vislibProject="sys" vislibFile="vislib\Path.h" />
+  <Entry vislibClass="vislib::sys::PerformanceCounter" vislibProject="sys" vislibFile="vislib\PerformanceCounter.h" theClass="the::system::performance_counter" theFile="the\system\performance_counter.h" />
+  <Entry vislibClass="vislib::sys::PoolAllocator" vislibProject="sys" vislibFile="vislib\PoolAllocator.h" />
+  <Entry vislibClass="vislib::sys::Process" vislibProject="sys" vislibFile="vislib\Process.h" />
+  <Entry vislibClass="vislib::sys::RegistryKey" vislibProject="sys" vislibFile="vislib\RegistryKey.h" />
+  <Entry vislibClass="vislib::sys::RegistrySerialiser" vislibProject="sys" vislibFile="vislib\RegistrySerialiser.h" />
+  <Entry vislibClass="vislib::sys::Runnable" vislibProject="sys" vislibFile="vislib\Runnable.h" theClass="the::system::threading::runnable" theFile="the\system\threading\runnable.h" />
+  <Entry vislibClass="vislib::sys::RunnableThread" vislibProject="sys" vislibFile="vislib\RunnableThread.h" theClass="the::system::threading::runnable_thread" theFile="the\system\threading\runnable_thread.h" />
+  <Entry vislibClass="vislib::sys::Semaphore" vislibProject="sys" vislibFile="vislib\Semaphore.h" theClass="the::system::threading::semaphore" theFile="the\system\threading\semaphore.h" comment="TODO: Name translation for Linux missing" />
+  <Entry vislibClass="vislib::sys::SharedMemory" vislibProject="sys" vislibFile="vislib\SharedMemory.h" />
+  <Entry vislibClass="vislib::sys::SlimReaderWriterLock" vislibProject="sys" vislibFile="vislib\SlimReaderWriterLock.h" />
+  <Entry vislibClass="vislib::sys::SynchronisedArray" vislibProject="sys" vislibFile="vislib\SynchronisedArray.h" theClass="the::collections::array" theFile="the\collections\array.h" comment="Instantiate with a lock object e.g. the::system::threading::critical_section" />
+  <Entry vislibClass="vislib::sys::SyncObject" vislibProject="sys" vislibFile="vislib\SyncObject.h" comment="deprecated" />
+  <Entry vislibClass="vislib::sys::SystemException" vislibProject="sys" vislibFile="vislib\SystemException.h" theClass="the::system::system_exception" theFile="the\system\system_exception.h" />
+  <Entry vislibClass="vislib::sys::SystemInformation" vislibProject="sys" vislibFile="vislib\SystemInformation.h" />
+  <Entry vislibClass="vislib::sys::SystemMessage" vislibProject="sys" vislibFile="vislib\SystemMessage.h" theClass="the::system::system_message" theFile="the\system\system_message.h" />
+  <Entry vislibClass="vislib::sys::TextFileReader" vislibProject="sys" vislibFile="vislib\TextFileReader.h" />
+  <Entry vislibClass="vislib::sys::Thread" vislibProject="sys" vislibFile="vislib\Thread.h" theClass="the::system::threading::thread" theFile="the\system\threading\thread.h" comment="Support for running anything except runnables has been dropped." />
+  <Entry vislibClass="vislib::sys::ThreadPool" vislibProject="sys" vislibFile="vislib\ThreadPool.h" comment="TODO: Should use system thread pool on Win32" />
+  <Entry vislibClass="vislib::sys::ThreadPoolListener" vislibProject="sys" vislibFile="vislib\ThreadPoolListener.h" />
+  <Entry vislibClass="vislib::sys::ThreadSafeStackTrace" vislibProject="sys" vislibFile="vislib\ThreadSafeStackTrace.h" comment="TODO: Stack trace should always be thread-safe using TLS" />
+  <Entry vislibClass="vislib::sys::TrayIcon" vislibProject="sys" vislibFile="vislib\TrayIcon.h" />
+  <Entry vislibClass="vislib::sys::VolatileIPCStringTable" vislibProject="sys" vislibFile="vislib\VolatileIPCStringTable.h" />
+  <Entry vislibClass="vislib::sys::VolatileIPCStringTable::Entry" vislibProject="sys" vislibFile="vislib\VolatileIPCStringTable.h" />
+  <Entry vislibClass="vislib::sys::WindowsService" vislibProject="sys" vislibFile="vislib\WindowsService.h" />
+  <Entry vislibClass="vislib::Trace" vislibProject="base" vislibFile="vislib\Trace.h" theClass="the::trace" theFile="the\trace.h" />
+  <Entry vislibClass="vislib::UnsupportedOperationException" vislibProject="base" vislibFile="vislib\UnsupportedOperationException.h" theClass="the::not_supported_exception" theFile="the\not_supported_exception.h" />
+  <Entry vislibClass="vislib::UTF8Encoder" vislibProject="base" vislibFile="vislib\UTF8Encoder.h" theClass="the::text::string_converter" theFile="the\text\string_converter.h" comment="[[VisLibStringMigration]]" />
+  <Entry vislibClass="vislib::VersionNumber" vislibProject="base" vislibFile="vislib\VersionNumber.h" theClass="the::version_number" theFile="the\version_number.h" />
+</ArrayOfEntry>

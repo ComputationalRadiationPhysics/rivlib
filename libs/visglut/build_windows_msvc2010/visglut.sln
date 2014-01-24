@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "visglut", "visglut.vcxproj", "{68B80658-540B-40E1-8C5E-3AE91AB35888}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68B80658-540B-40E1-8C5E-3AE91AB35888}.Debug|Win32.ActiveCfg = Debug|Win32
+		{68B80658-540B-40E1-8C5E-3AE91AB35888}.Debug|Win32.Build.0 = Debug|Win32
+		{68B80658-540B-40E1-8C5E-3AE91AB35888}.Debug|x64.ActiveCfg = Debug|x64
+		{68B80658-540B-40E1-8C5E-3AE91AB35888}.Debug|x64.Build.0 = Debug|x64
+		{68B80658-540B-40E1-8C5E-3AE91AB35888}.Release|Win32.ActiveCfg = Release|Win32
+		{68B80658-540B-40E1-8C5E-3AE91AB35888}.Release|Win32.Build.0 = Release|Win32
+		{68B80658-540B-40E1-8C5E-3AE91AB35888}.Release|x64.ActiveCfg = Release|x64
+		{68B80658-540B-40E1-8C5E-3AE91AB35888}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

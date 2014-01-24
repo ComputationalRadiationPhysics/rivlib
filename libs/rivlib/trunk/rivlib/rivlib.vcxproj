@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\abstract_queued_broker.cpp" />
+    <ClCompile Include="src\api\api_ptr_base.cpp" />
+    <ClCompile Include="src\api\broker.cpp" />
+    <ClCompile Include="src\api\communicator.cpp" />
+    <ClCompile Include="src\api\connection_base.cpp" />
+    <ClCompile Include="src\api\control_connection.cpp" />
+    <ClCompile Include="src\api\core.cpp" />
+    <ClCompile Include="src\api\data_binding.cpp" />
+    <ClCompile Include="src\api\image_data_binding.cpp" />
+    <ClCompile Include="src\api\image_stream_connection.cpp" />
+    <ClCompile Include="src\api\ip_communicator.cpp" />
+    <ClCompile Include="src\api\node_base.cpp" />
+    <ClCompile Include="src\api\provider.cpp" />
+    <ClCompile Include="src\api\raw_image_data_binding.cpp" />
+    <ClCompile Include="src\api\simple_console_broker.cpp" />
+    <ClCompile Include="src\api\vicci_middleware_broker.cpp" />
+    <ClCompile Include="src\api_impl\control_connection_impl.cpp" />
+    <ClCompile Include="src\api_impl\core_impl.cpp" />
+    <ClCompile Include="src\api_impl\image_stream_connection_impl.cpp" />
+    <ClCompile Include="src\api_impl\ip_communicator_impl.cpp" />
+    <ClCompile Include="src\api_impl\provider_impl.cpp" />
+    <ClCompile Include="src\api_impl\raw_image_data_binding_impl.cpp" />
+    <ClCompile Include="src\api_impl\simple_console_broker_impl.cpp" />
+    <ClCompile Include="src\api_impl\vicci_middleware_broker_impl.cpp" />
+    <ClCompile Include="src\connection_base_impl.cpp" />
+    <ClCompile Include="src\data\buffer.cpp" />
+    <ClCompile Include="src\data\slot.cpp" />
+    <ClCompile Include="src\data_channel_info.cpp" />
+    <ClCompile Include="src\dllmain.cpp" />
+    <ClCompile Include="src\element_node.cpp" />
+    <ClCompile Include="src\encoder\image_encoder_base.cpp" />
+    <ClCompile Include="src\encoder\image_encoder_rgb_raw.cpp" />
+    <ClCompile Include="src\encoder\image_encoder_rgb_zip.cpp" />
+    <ClCompile Include="src\encoder\image_request.cpp" />
+    <ClCompile Include="src\error_log.cpp" />
+    <ClCompile Include="src\ip_connection.cpp" />
+    <ClCompile Include="src\jni\java_vm.cpp" />
+    <ClCompile Include="src\jni\java_vm_config.cpp" />
+    <ClCompile Include="src\node.cpp" />
+    <ClCompile Include="src\rivlib.cpp" />
+    <ClCompile Include="src\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\thread_scrubber.cpp" />
+    <ClCompile Include="src\uri_utility.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\rivlib\api_ptr.h" />
+    <ClInclude Include="include\rivlib\api_ptr_base.h" />
+    <ClInclude Include="include\rivlib\broker.h" />
+    <ClInclude Include="include\rivlib\common.h" />
+    <ClInclude Include="include\rivlib\communicator.h" />
+    <ClInclude Include="include\rivlib\config.h" />
+    <ClInclude Include="include\rivlib\connection_base.h" />
+    <ClInclude Include="include\rivlib\control_connection.h" />
+    <ClInclude Include="include\rivlib\core.h" />
+    <ClInclude Include="include\rivlib\data_binding.h" />
+    <ClInclude Include="include\rivlib\image_data_binding.h" />
+    <ClInclude Include="include\rivlib\image_data_types.h" />
+    <ClInclude Include="include\rivlib\image_stream_connection.h" />
+    <ClInclude Include="include\rivlib\ip_communicator.h" />
+    <ClInclude Include="include\rivlib\ip_utilities.h" />
+    <ClInclude Include="include\rivlib\node_base.h" />
+    <ClInclude Include="include\rivlib\provider.h" />
+    <ClInclude Include="include\rivlib\raw_image_data_binding.h" />
+    <ClInclude Include="include\rivlib\rivlib.h" />
+    <ClInclude Include="include\rivlib\simple_console_broker.h" />
+    <ClInclude Include="include\rivlib\version.h" />
+    <ClInclude Include="include\rivlib\vicci_middleware_broker.h" />
+    <ClInclude Include="src\abstract_queued_broker.h" />
+    <ClInclude Include="src\api_impl\control_connection_impl.h" />
+    <ClInclude Include="src\api_impl\core_impl.h" />
+    <ClInclude Include="src\api_impl\image_stream_connection_impl.h" />
+    <ClInclude Include="src\api_impl\ip_communicator_impl.h" />
+    <ClInclude Include="src\api_impl\provider_impl.h" />
+    <ClInclude Include="src\api_impl\raw_image_data_binding_impl.h" />
+    <ClInclude Include="src\api_impl\simple_console_broker_impl.h" />
+    <ClInclude Include="src\api_impl\vicci_middleware_broker_impl.h" />
+    <ClInclude Include="src\connection_base_impl.h" />
+    <ClInclude Include="src\data\buffer.h" />
+    <ClInclude Include="src\data\buffer_type.h" />
+    <ClInclude Include="src\data\image_buffer_metadata.h" />
+    <ClInclude Include="src\data\slot.h" />
+    <ClInclude Include="src\data_channel_info.h" />
+    <ClInclude Include="src\element_node.h" />
+    <ClInclude Include="src\encoder\image_encoder_base.h" />
+    <ClInclude Include="src\encoder\image_encoder_rgb_raw.h" />
+    <ClInclude Include="src\encoder\image_encoder_rgb_zip.h" />
+    <ClInclude Include="src\encoder\image_request.h" />
+    <ClInclude Include="src\error_log.h" />
+    <ClInclude Include="src\ip_connection.h" />
+    <ClInclude Include="src\jni\java_vm.h" />
+    <ClInclude Include="src\jni\java_vm_config.h" />
+    <ClInclude Include="src\message_image_request.h" />
+    <ClInclude Include="src\node.h" />
+    <ClInclude Include="src\stdafx.h" />
+    <ClInclude Include="src\targetver.h" />
+    <ClInclude Include="src\thread_scrubber.h" />
+    <ClInclude Include="src\uri_utility.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\version.rc" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D7DAB075-FC81-41B6-BE96-3F2EB764FCF1}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>rivlib</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\vsprops\target_debug32.props" />
+    <Import Project="..\extlibs.props" />
+    <Import Project="..\vsprops\common.props" />
+    <Import Project="libs32.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\vsprops\target_debug64.props" />
+    <Import Project="..\extlibs.props" />
+    <Import Project="..\vsprops\common.props" />
+    <Import Project="libs64.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\vsprops\target_release32.props" />
+    <Import Project="..\extlibs.props" />
+    <Import Project="..\vsprops\common.props" />
+    <Import Project="libs32.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\vsprops\target_release64.props" />
+    <Import Project="..\extlibs.props" />
+    <Import Project="..\vsprops\common.props" />
+    <Import Project="libs64.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;RIVLIB_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\;$(ProjectDir)include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BrowseInformation>false</BrowseInformation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>the.lib;vislibbase$(BitsD).lib;vislibmath$(BitsD).lib;vislibsys$(BitsD).lib;vislibnet$(BitsD).lib;Advapi32.lib;Shell32.lib;zlib$(BitsD).lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;RIVLIB_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\;$(ProjectDir)include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>the.lib;vislibbase$(BitsD).lib;vislibmath$(BitsD).lib;vislibsys$(BitsD).lib;vislibnet$(BitsD).lib;Advapi32.lib;Shell32.lib;zlib$(BitsD).lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;RIVLIB_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\;$(ProjectDir)include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>the.lib;vislibbase$(BitsD).lib;vislibmath$(BitsD).lib;vislibsys$(BitsD).lib;vislibnet$(BitsD).lib;Advapi32.lib;Shell32.lib;zlib$(BitsD).lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;RIVLIB_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\;$(ProjectDir)include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>the.lib;vislibbase$(BitsD).lib;vislibmath$(BitsD).lib;vislibsys$(BitsD).lib;vislibnet$(BitsD).lib;Advapi32.lib;Shell32.lib;zlib$(BitsD).lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

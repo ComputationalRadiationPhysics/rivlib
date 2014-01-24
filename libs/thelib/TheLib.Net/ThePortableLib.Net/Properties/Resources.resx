@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ErrorConcatenationMissing" xml:space="preserve">
+    <value>Eine zusammengesetzte Konvertierung muss aus mindestens zwei Konvertierungen bestehen.</value>
+  </data>
+  <data name="ErrorConverterOffsetIdentity" xml:space="preserve">
+    <value>Der Offset darf nicht null sein, da die Konvertierung sonst der Identität entspricht</value>
+  </data>
+  <data name="ErrorConverterScaleIdentity" xml:space="preserve">
+    <value>Die Skalierung darf nicht eins sein, da die Konvertierung sonst der Identität entspricht</value>
+  </data>
+  <data name="ErrorDuplicateUnitSymbol" xml:space="preserve">
+    <value>Das angegebene Einheitensymbol "{0}" wurde bereits für eine andere Einheit verwendet.</value>
+    <comment>Error message when unit symbol is used twice.</comment>
+  </data>
+  <data name="ErrorInvalidUcumCiSymbol" xml:space="preserve">
+    <value>"{0}" is kein gültiges Symbol.</value>
+  </data>
+  <data name="ErrorMinNotLessThanMax" xml:space="preserve">
+    <value>Ein Minimalwert muss immer kleiner als ein Maximalwert sein.</value>
+  </data>
+  <data name="ErrorPropBodyNotConstant" xml:space="preserve">
+    <value>Der angegebene Lambda-Ausdruck hat keinen konstanten Rumpf.</value>
+    <comment>Error message when lambda expression in ChangeAndNotify is not constant.</comment>
+  </data>
+  <data name="ErrorPropExprBodyMissing" xml:space="preserve">
+    <value>Der angegebene Lambda-Ausdruck ist leer oder repräsentiert keine Eigenschaft.</value>
+    <comment>Error message when lambda expression in ChangeAndNotify has no body.</comment>
+  </data>
+  <data name="ErrorScalingFactorDimensionless" xml:space="preserve">
+    <value>Das Ergebnis einer Einheitskonvertierung durch Multiplikation darf nicht 0 sein, weshalb 0 als Faktor ungültig ist.</value>
+  </data>
+  <data name="ErrorScalingFactorIdentity" xml:space="preserve">
+    <value>Das Ergebnis einer Einheitskonvertierung durch Skalierung darf nicht die Identität sein, weshalb 1 als Faktor ungültig ist.</value>
+  </data>
+  <data name="ErrorShiftingOffsetIdentity" xml:space="preserve">
+    <value>Das Ergebnis einer Einheitskonvertierung durch Addition darf nicht die Identität sein, weshalb 0 als Offset ungültig ist.</value>
+  </data>
+  <data name="ErrorUnitFactorDimensionless" xml:space="preserve">
+    <value>Ein Faktor in einer durch Skalierung entstandenen Einheit darf nicht dimensionslos sein, weshalb 0 nicht als Skalierungsfaktor oder Exponent verwendet werden darf.</value>
+  </data>
+  <data name="ErrorUnitFactorIdentity" xml:space="preserve">
+    <value>TODO</value>
+  </data>
+  <data name="ImperialUnitAcre" xml:space="preserve">
+    <value>Britisches Acre</value>
+  </data>
+  <data name="ImperialUnitCable" xml:space="preserve">
+    <value>Britisches Cable</value>
+  </data>
+  <data name="ImperialUnitChain" xml:space="preserve">
+    <value>Britisches Chain</value>
+  </data>
+  <data name="ImperialUnitDrachm" xml:space="preserve">
+    <value>Britisches Dram</value>
+  </data>
+  <data name="ImperialUnitFathom" xml:space="preserve">
+    <value>Britisches Fathom</value>
+  </data>
+  <data name="ImperialUnitFluidDrachm" xml:space="preserve">
+    <value>Britisches Fluid Drachm</value>
+  </data>
+  <data name="ImperialUnitFluidOunce" xml:space="preserve">
+    <value>Britische Fluid Ounce</value>
+  </data>
+  <data name="ImperialUnitFluidScruple" xml:space="preserve">
+    <value>Britisches Fluid Scruple</value>
+  </data>
+  <data name="ImperialUnitFoot" xml:space="preserve">
+    <value>Britischer Fuß</value>
+  </data>
+  <data name="ImperialUnitFurlong" xml:space="preserve">
+    <value>Britisches Furlong</value>
+  </data>
+  <data name="ImperialUnitGallon" xml:space="preserve">
+    <value>Britische Gallone</value>
+  </data>
+  <data name="ImperialUnitGill" xml:space="preserve">
+    <value>Britisches Gill</value>
+  </data>
+  <data name="ImperialUnitGrain" xml:space="preserve">
+    <value>Britisches Grain</value>
+  </data>
+  <data name="ImperialUnitHundredweight" xml:space="preserve">
+    <value>Britisches Hundredweight</value>
+  </data>
+  <data name="ImperialUnitInch" xml:space="preserve">
+    <value>Britisches Zoll</value>
+  </data>
+  <data name="ImperialUnitLeague" xml:space="preserve">
+    <value>Britische League</value>
+  </data>
+  <data name="ImperialUnitLink" xml:space="preserve">
+    <value>Britisches Link</value>
+  </data>
+  <data name="ImperialUnitMile" xml:space="preserve">
+    <value>Britische Meile</value>
+  </data>
+  <data name="ImperialUnitMinim" xml:space="preserve">
+    <value>Britisches Minim</value>
+  </data>
+  <data name="ImperialUnitNauticalMile" xml:space="preserve">
+    <value>Britische nautische Meile</value>
+  </data>
+  <data name="ImperialUnitOunce" xml:space="preserve">
+    <value>Britische Unze</value>
+  </data>
+  <data name="ImperialUnitPerch" xml:space="preserve">
+    <value>Britisches Perch</value>
+  </data>
+  <data name="ImperialUnitPint" xml:space="preserve">
+    <value>Britisches Pint</value>
+  </data>
+  <data name="ImperialUnitPound" xml:space="preserve">
+    <value>Britisches Pfund</value>
+  </data>
+  <data name="ImperialUnitQuart" xml:space="preserve">
+    <value>Britisches Quart</value>
+  </data>
+  <data name="ImperialUnitQuarter" xml:space="preserve">
+    <value>Britisches Quarter</value>
+  </data>
+  <data name="ImperialUnitRod" xml:space="preserve">
+    <value>Britisches Rod</value>
+  </data>
+  <data name="ImperialUnitRood" xml:space="preserve">
+    <value>Britisches Rood</value>
+  </data>
+  <data name="ImperialUnitStone" xml:space="preserve">
+    <value>Britisches Stone</value>
+  </data>
+  <data name="ImperialUnitThou" xml:space="preserve">
+    <value>Britisches Thou</value>
+  </data>
+  <data name="ImperialUnitTon" xml:space="preserve">
+    <value>Britische Tonne</value>
+  </data>
+  <data name="ImperialUnitYard" xml:space="preserve">
+    <value>Britisches Yard</value>
+  </data>
+  <data name="MetricUnitCelsius" xml:space="preserve">
+    <value>Celsius</value>
+  </data>
+  <data name="MetricUnitCentilitre" xml:space="preserve">
+    <value>Zentiliter</value>
+  </data>
+  <data name="MetricUnitLitre" xml:space="preserve">
+    <value>Liter</value>
+  </data>
+  <data name="MetricUnitMillilitre" xml:space="preserve">
+    <value>Milliliter</value>
+  </data>
+  <data name="MetricUnitTonne" xml:space="preserve">
+    <value>Tonne</value>
+  </data>
+  <data name="SiPrefixAtto" xml:space="preserve">
+    <value>Atto</value>
+  </data>
+  <data name="SiPrefixCenti" xml:space="preserve">
+    <value>Zenti</value>
+  </data>
+  <data name="SiPrefixDeca" xml:space="preserve">
+    <value>Deka</value>
+  </data>
+  <data name="SiPrefixDeci" xml:space="preserve">
+    <value>Dezi</value>
+  </data>
+  <data name="SiPrefixExa" xml:space="preserve">
+    <value>Exa</value>
+  </data>
+  <data name="SiPrefixFemto" xml:space="preserve">
+    <value>Femto</value>
+  </data>
+  <data name="SiPrefixGiga" xml:space="preserve">
+    <value>Giga</value>
+  </data>
+  <data name="SiPrefixHecto" xml:space="preserve">
+    <value>Hekto</value>
+  </data>
+  <data name="SiPrefixKilo" xml:space="preserve">
+    <value>Kilo</value>
+  </data>
+  <data name="SiPrefixMega" xml:space="preserve">
+    <value>Mega</value>
+  </data>
+  <data name="SiPrefixMicro" xml:space="preserve">
+    <value>Mikro</value>
+  </data>
+  <data name="SiPrefixMilli" xml:space="preserve">
+    <value>Milli</value>
+  </data>
+  <data name="SiPrefixNano" xml:space="preserve">
+    <value>Nano</value>
+  </data>
+  <data name="SiPrefixPeta" xml:space="preserve">
+    <value>Peta</value>
+  </data>
+  <data name="SiPrefixPico" xml:space="preserve">
+    <value>Piko</value>
+  </data>
+  <data name="SiPrefixTera" xml:space="preserve">
+    <value>Tera</value>
+  </data>
+  <data name="SiPrefixYocto" xml:space="preserve">
+    <value>Yokto</value>
+  </data>
+  <data name="SiPrefixYotta" xml:space="preserve">
+    <value>Yotta</value>
+  </data>
+  <data name="SiPrefixZepto" xml:space="preserve">
+    <value>Zepto</value>
+  </data>
+  <data name="SiPrefixZetta" xml:space="preserve">
+    <value>Zetta</value>
+  </data>
+  <data name="SiUnitAmpere" xml:space="preserve">
+    <value>Ampere</value>
+  </data>
+  <data name="SiUnitBecquerel" xml:space="preserve">
+    <value>Becquerel</value>
+  </data>
+  <data name="SiUnitCandela" xml:space="preserve">
+    <value>Candela</value>
+  </data>
+  <data name="SiUnitCoulomb" xml:space="preserve">
+    <value>Coulomb</value>
+  </data>
+  <data name="SiUnitCubicMetre" xml:space="preserve">
+    <value>Kubikmeter</value>
+  </data>
+  <data name="SiUnitDimensionless" xml:space="preserve">
+    <value>Dimensionslos</value>
+  </data>
+  <data name="SiUnitFarad" xml:space="preserve">
+    <value>Farad</value>
+  </data>
+  <data name="SiUnitGramme" xml:space="preserve">
+    <value>Gramm</value>
+  </data>
+  <data name="SiUnitGray" xml:space="preserve">
+    <value>Gray</value>
+  </data>
+  <data name="SiUnitHenry" xml:space="preserve">
+    <value>Henry</value>
+  </data>
+  <data name="SiUnitHertz" xml:space="preserve">
+    <value>Hertz</value>
+  </data>
+  <data name="SiUnitJoule" xml:space="preserve">
+    <value>Joule</value>
+  </data>
+  <data name="SiUnitKatal" xml:space="preserve">
+    <value>Katal</value>
+  </data>
+  <data name="SiUnitKelvin" xml:space="preserve">
+    <value>Kelvin</value>
+  </data>
+  <data name="SiUnitKilogramme" xml:space="preserve">
+    <value>Kilogramm</value>
+  </data>
+  <data name="SiUnitLumen" xml:space="preserve">
+    <value>Lumen</value>
+  </data>
+  <data name="SiUnitLux" xml:space="preserve">
+    <value>Lux</value>
+  </data>
+  <data name="SiUnitMetre" xml:space="preserve">
+    <value>Meter</value>
+  </data>
+  <data name="SiUnitMole" xml:space="preserve">
+    <value>Mol</value>
+  </data>
+  <data name="SiUnitNewton" xml:space="preserve">
+    <value>Newton</value>
+  </data>
+  <data name="SiUnitOhm" xml:space="preserve">
+    <value>Ohm</value>
+  </data>
+  <data name="SiUnitPascal" xml:space="preserve">
+    <value>Pascal</value>
+  </data>
+  <data name="SiUnitRadian" xml:space="preserve">
+    <value>Radian</value>
+  </data>
+  <data name="SiUnitSecond" xml:space="preserve">
+    <value>Sekunde</value>
+  </data>
+  <data name="SiUnitSiemens" xml:space="preserve">
+    <value>Siemens</value>
+  </data>
+  <data name="SiUnitSievert" xml:space="preserve">
+    <value>Sievert</value>
+  </data>
+  <data name="SiUnitSquareMetre" xml:space="preserve">
+    <value>Quadratmeter</value>
+  </data>
+  <data name="SiUnitSteradian" xml:space="preserve">
+    <value>Steradian</value>
+  </data>
+  <data name="SiUnitTesla" xml:space="preserve">
+    <value>Tesla</value>
+  </data>
+  <data name="SiUnitVolt" xml:space="preserve">
+    <value>Volt</value>
+  </data>
+  <data name="SiUnitWatt" xml:space="preserve">
+    <value>Watt</value>
+  </data>
+  <data name="SiUnitWeber" xml:space="preserve">
+    <value>Weber</value>
+  </data>
+</root>

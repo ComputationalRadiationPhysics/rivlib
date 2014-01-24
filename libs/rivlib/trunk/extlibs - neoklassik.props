@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <vislibpath>D:\dev\vislib\</vislibpath>
+    <visglutpath>D:\dev\visglut\</visglutpath>
+    <thelibpath>D:\dev\TheLib\</thelibpath>
+    <anttweakbarpath>D:\dev\libs\msvc_11_0_60315_1\</anttweakbarpath>
+    <jdk32path>C:\Program Files (x86)\Java\jdk1.7.0_13\</jdk32path>
+    <jdk64path>C:\Program Files\Java\jdk1.7.0_13\</jdk64path>
+    <zlibpath>D:\dev\libs\msvc_11_0_60315_1\</zlibpath>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup />
+  <ItemGroup>
+    <BuildMacro Include="vislibpath">
+      <Value>$(vislibpath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="visglutpath">
+      <Value>$(visglutpath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="thelibpath">
+      <Value>$(thelibpath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="anttweakbarpath">
+      <Value>$(anttweakbarpath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="jdk32path">
+      <Value>$(jdk32path)</Value>
+    </BuildMacro>
+    <BuildMacro Include="jdk64path">
+      <Value>$(jdk64path)</Value>
+    </BuildMacro>
+    <BuildMacro Include="zlibpath">
+      <Value>$(zlibpath)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

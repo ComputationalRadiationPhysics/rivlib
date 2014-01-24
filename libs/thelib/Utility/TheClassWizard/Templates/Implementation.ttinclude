@@ -1,0 +1,111 @@
+﻿<#+ 
+    private void renderImplementation() {
+#>
+/*
+ * <#= fqClassName #>::<#= className #>
+ */
+<#+ 
+        if (!string.IsNullOrWhiteSpace(this.templateDecl)) {
+            this.WriteLine(this.templateDecl);
+        }
+#>
+<#= fqClassName #>::<#= className #>(void)<#+
+        if (baseClasses.Count == 1) {
+            this.Write(" : base() ");
+        } else if (baseClasses.Count > 1) {
+            this.Write(" : ");
+            this.Write(string.Join("(), ", baseClasses));
+            this.Write("()");
+        }
+        #> {
+    THE_STACK_TRACE;
+    // TODO: Implement <#= fqClassName #>::<#= className #>
+    THROW_THE_NOT_IMPLEMENTED_EXCEPTION;
+}
+<#+ 
+        if (makeCopyable) { 
+#>
+
+
+/*
+ * <#= fqClassName #>::<#= className #>
+ */
+<#+ 
+        if (!string.IsNullOrWhiteSpace(this.templateDecl)) {
+            this.WriteLine(this.templateDecl);
+        }
+#>
+<#= fqClassName #>::<#= className #>(const <#= className #>& rhs)<#+
+        if (baseClasses.Count == 1) {
+            this.Write(" : base(rhs) ");
+        } else if (baseClasses.Count > 1) {
+            this.Write(" : ");
+            this.Write(string.Join("(rhs), ", baseClasses));
+            this.Write("(rhs)");
+        }
+        #> {
+    THE_STACK_TRACE;
+    // TODO: Implement <#= fqClassName #>::<#= className #>
+    THROW_THE_NOT_IMPLEMENTED_EXCEPTION;
+}
+<#+
+     }
+#>
+
+
+/*
+ * <#= fqClassName #>::~<#= className #>
+ */
+<#+ 
+        if (!string.IsNullOrWhiteSpace(this.templateDecl)) {
+            this.WriteLine(this.templateDecl);
+        }
+#>
+<#= fqClassName #>::~<#= className #>(void) {
+    THE_STACK_TRACE;
+    // TODO: Implement <#= fqClassName #>::~<#= className #>
+    THROW_THE_NOT_IMPLEMENTED_EXCEPTION;
+}
+<#+ 
+        if (makeCopyable) { 
+#>
+
+
+/*
+ * <#= fqClassName #>::operator =
+ */
+<#+ 
+        if (!string.IsNullOrWhiteSpace(this.templateDecl)) {
+            this.WriteLine(this.templateDecl);
+        }
+#>
+<#= fqClassName #>& <#= fqClassName #>::operator =(const <#= className #>& rhs) {
+    THE_STACK_TRACE;
+    if (this != &rhs) {
+<#+
+            if (baseClasses.Count == 1) {
+#>
+        base::operator =(rhs);
+<#+
+            } else if (baseClasses.Count > 1) {
+                foreach (string b in baseClasses) {
+#>
+        <#= b #>::operator =(rhs);
+<#+
+                } /* end foreach (string b in baseClasses) */
+            } /* end if (baseClasses.Count == 1) */
+#>
+        // TODO: Implement <#= fqClassName #>::operator =
+        THROW_THE_NOT_IMPLEMENTED_EXCEPTION;
+    }
+    return *this;
+}
+
+<#+ 
+        } /* end if (makeCopyable) */
+#>
+
+
+<#+
+    } /* end private void renderImplementation() */
+#>

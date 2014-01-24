@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{411F9E10-3AC1-417F-8D75-C2BB8D2C265C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>The</RootNamespace>
+    <AssemblyName>theportablelib</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile88</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Mathematics\MathExtensions.cs" />
+    <Compile Include="Measurement\Converters\ExponentialUnitConverter.cs" />
+    <Compile Include="Measurement\Converters\LogarithmicUnitConverter.cs" />
+    <Compile Include="Measurement\Converters\OffsetUnitConverter.cs" />
+    <Compile Include="Measurement\Converters\RationalUnitConverter.cs" />
+    <Compile Include="Measurement\Converters\ScaleUnitConverter.cs" />
+    <Compile Include="Measurement\Converters\UnitConverter.cs" />
+    <Compile Include="Measurement\Dimensions\DimensionalModel.cs" />
+    <Compile Include="Measurement\Units\AlternateUnit.cs" />
+    <Compile Include="Measurement\Units\ProductUnit.cs" />
+    <Compile Include="Measurement\Units\TransformedUnit.cs" />
+    <Compile Include="Measurement\Units\UcumSymbolAttribute.cs" />
+    <Compile Include="Measurement\Units\UcumUnits.cs" />
+    <Compile Include="Utility\DisplayKeyNameAttribute.cs" />
+    <Compile Include="Utility\IEnumerableExtensions.cs" />
+    <Compile Include="Utility\MemberInfoExtensions.cs" />
+    <Compile Include="Utility\StringExtensions.cs" />
+    <Compile Include="Utility\TypeExtensions.cs" />
+    <Compile Include="Measurement\Quantities\AbsorbedDose.cs" />
+    <Compile Include="Measurement\Quantities\AbsorbedDoseRate.cs" />
+    <Compile Include="Measurement\Quantities\Acceleration.cs" />
+    <Compile Include="Measurement\Quantities\Action.cs" />
+    <Compile Include="Measurement\Quantities\AmountOfSubstanceConcentration.cs" />
+    <Compile Include="Measurement\Quantities\Angle.cs" />
+    <Compile Include="Measurement\Quantities\AngularMomentum.cs" />
+    <Compile Include="Measurement\Quantities\AngularVelocity.cs" />
+    <Compile Include="Measurement\Quantities\Area.cs" />
+    <Compile Include="Measurement\Quantities\AreaDensity.cs" />
+    <Compile Include="Measurement\Quantities\CatalyticActivity.cs" />
+    <Compile Include="Measurement\Quantities\Conductivity.cs" />
+    <Compile Include="Measurement\Quantities\Density.cs" />
+    <Compile Include="Measurement\Quantities\DynamicViscosity.cs" />
+    <Compile Include="Measurement\Quantities\ElectricCapacitance.cs" />
+    <Compile Include="Measurement\Quantities\ElectricCharge.cs" />
+    <Compile Include="Measurement\Quantities\ElectricChargeDensity.cs" />
+    <Compile Include="Measurement\Quantities\ElectricConductance.cs" />
+    <Compile Include="Measurement\Quantities\ElectricCurrentDensity.cs" />
+    <Compile Include="Measurement\Quantities\ElectricDisplacementField.cs" />
+    <Compile Include="Measurement\Quantities\ElectricFieldStrength.cs" />
+    <Compile Include="Measurement\Quantities\ElectricPotential.cs" />
+    <Compile Include="Measurement\Quantities\ElectricResistance.cs" />
+    <Compile Include="Measurement\Quantities\Energy.cs" />
+    <Compile Include="Measurement\Quantities\EnergyDensity.cs" />
+    <Compile Include="Measurement\Quantities\EquivalentDose.cs" />
+    <Compile Include="Measurement\Quantities\Exposure.cs" />
+    <Compile Include="Measurement\Quantities\Force.cs" />
+    <Compile Include="Measurement\Quantities\Frequency.cs" />
+    <Compile Include="Measurement\Quantities\HeatCapacity.cs" />
+    <Compile Include="Measurement\Quantities\HeatFluxDensity.cs" />
+    <Compile Include="Measurement\Quantities\Illuminance.cs" />
+    <Compile Include="Measurement\Quantities\KinematicViscosity.cs" />
+    <Compile Include="Measurement\Quantities\Luminance.cs" />
+    <Compile Include="Measurement\Quantities\LuminousEnergy.cs" />
+    <Compile Include="Measurement\Quantities\LuminousExposure.cs" />
+    <Compile Include="Measurement\Quantities\MagneticFieldStrength.cs" />
+    <Compile Include="Measurement\Quantities\MolarConductivity.cs" />
+    <Compile Include="Measurement\Quantities\MolarEnergy.cs" />
+    <Compile Include="Measurement\Quantities\MolarHeatCapacity.cs" />
+    <Compile Include="Measurement\Quantities\MolarVolume.cs" />
+    <Compile Include="Measurement\Quantities\Momentum.cs" />
+    <Compile Include="Measurement\Quantities\Inductance.cs" />
+    <Compile Include="Measurement\Quantities\Jerk.cs" />
+    <Compile Include="Measurement\Quantities\LuminousFlux.cs" />
+    <Compile Include="Measurement\Quantities\MagneticFlux.cs" />
+    <Compile Include="Measurement\Quantities\MagneticFluxDensity.cs" />
+    <Compile Include="Measurement\Quantities\Permeability.cs" />
+    <Compile Include="Measurement\Quantities\Permittivity.cs" />
+    <Compile Include="Measurement\Quantities\Power.cs" />
+    <Compile Include="Measurement\Quantities\Pressure.cs" />
+    <Compile Include="Measurement\Quantities\Radioactivity.cs" />
+    <Compile Include="Measurement\Quantities\Resistivity.cs" />
+    <Compile Include="Measurement\Quantities\Snap.cs" />
+    <Compile Include="Measurement\Quantities\SolidAngle.cs" />
+    <Compile Include="Measurement\Quantities\SpecificEnergy.cs" />
+    <Compile Include="Measurement\Quantities\SpecificHeatCapacity.cs" />
+    <Compile Include="Measurement\Quantities\SpecificVolume.cs" />
+    <Compile Include="Measurement\Quantities\Velocity.cs" />
+    <Compile Include="Measurement\Quantities\SurfaceTension.cs" />
+    <Compile Include="Measurement\Quantities\ThermalConductivity.cs" />
+    <Compile Include="Measurement\Quantities\Torque.cs" />
+    <Compile Include="Measurement\Quantities\Volume.cs" />
+    <Compile Include="Measurement\Quantities\VolumetricFlow.cs" />
+    <Compile Include="Measurement\Quantities\Wavenumber.cs" />
+    <Compile Include="Measurement\Quantities\Yank.cs" />
+    <Compile Include="Measurement\Dimensions\Dimension.cs" />
+    <Compile Include="Measurement\Quantities\AmountOfSubstance.cs" />
+    <Compile Include="Measurement\Quantities\Dimensionless.cs" />
+    <Compile Include="Measurement\Quantities\ElectricCurrent.cs" />
+    <Compile Include="Measurement\Quantities\Length.cs" />
+    <Compile Include="Measurement\Quantities\LuminousIntensity.cs" />
+    <Compile Include="Measurement\Quantities\Mass.cs" />
+    <Compile Include="Measurement\Quantities\Temperature.cs" />
+    <Compile Include="Measurement\Quantities\Time.cs" />
+    <Compile Include="Measurement\Units\BaseUnit.cs" />
+    <Compile Include="Measurement\Units\ImperialUnits.cs" />
+    <Compile Include="Measurement\Units\MetricUnits.cs" />
+    <Compile Include="Measurement\Dimensions\SIDimensions.cs" />
+    <Compile Include="Measurement\Units\SIPrefix.cs" />
+    <Compile Include="Measurement\Units\SIUnits.cs" />
+    <Compile Include="Measurement\Units\Unit.cs" />
+    <Compile Include="Measurement\Units\UnitSystem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Measurement\Quantities\Quantity.cs" />
+    <Compile Include="Utility\NotifyPropertyChangedAdapter.cs" />
+    <Compile Include="Utility\PropertyChangedEventHandlerExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,990 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="collections">
+      <UniqueIdentifier>{a25d4c85-c0b5-484d-aa7e-e70819d05f7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text">
+      <UniqueIdentifier>{d845abc6-d548-40fa-a1ef-be5dc0c790a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="collections\Header Files">
+      <UniqueIdentifier>{efdb6d36-fe81-486a-9d4a-30c29d387c0e}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="collections\Source Files">
+      <UniqueIdentifier>{d0d36e13-397e-4b1a-bd61-92eb4eea0507}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="text\Header Files">
+      <UniqueIdentifier>{6fc76b57-ef4b-4d3f-998f-8ef0b0626b4f}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="text\Source Files">
+      <UniqueIdentifier>{2af8cb4f-fc2c-4e53-8638-b0c85a554a86}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="system">
+      <UniqueIdentifier>{5536effa-a8c7-4e53-b7d7-2e51486111c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\threading">
+      <UniqueIdentifier>{feeee628-9230-401a-9f15-0fbdf824ebdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\threading\Header Files">
+      <UniqueIdentifier>{e4a507a7-3038-41e2-9c4d-e9dc2868734a}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="system\threading\Source Files">
+      <UniqueIdentifier>{0e4278e6-dc58-41ea-ad9a-f9aef862f6da}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="system\Header Files">
+      <UniqueIdentifier>{13043aa5-e9d5-441a-8b5e-ea70899cd9ce}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="system\Source Files">
+      <UniqueIdentifier>{f83ecf62-26b3-48b0-beeb-362dcb5a65df}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="math">
+      <UniqueIdentifier>{3661fb03-07e1-47b2-9529-c2b3cb612d1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="math\Header Files">
+      <UniqueIdentifier>{4d28936a-04be-46fa-9d09-8d9c83866b49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="math\Source Files">
+      <UniqueIdentifier>{5a38050c-fad3-49cd-a705-872510b97e19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\io">
+      <UniqueIdentifier>{dd46182d-ad56-4a32-91aa-ff8445f53f49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\io\HeaderFiles">
+      <UniqueIdentifier>{d071605e-a962-4a48-969d-21c605a3e311}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="graphics">
+      <UniqueIdentifier>{8a942bd7-3fe8-4c56-8038-4e3c5c35fc05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="graphics\directx">
+      <UniqueIdentifier>{9b03df8a-d9ee-4778-9849-4dcf77ad5ac8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="graphics\directx\Header Files">
+      <UniqueIdentifier>{b3059708-6de6-4591-88c3-505fa0e1dd84}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="graphics\directx\Source Files">
+      <UniqueIdentifier>{8f8cac71-f27b-483e-94e6-94f06e42c681}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="system\net">
+      <UniqueIdentifier>{2992f71b-38da-4f5e-8fd3-e6a6880a1787}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\net\Header Files">
+      <UniqueIdentifier>{37a65da2-fc9a-423d-bf95-5dc6ec964e10}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="system\net\Source Files">
+      <UniqueIdentifier>{961d1fee-b642-45b8-8237-4d4fdc14ee55}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="system\io\Source Files">
+      <UniqueIdentifier>{2d627a98-0eba-4fd8-b1f6-dfb62dc0a9fa}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="graphics\opengl">
+      <UniqueIdentifier>{5575a868-4fcb-40a7-8447-42f7da07ce69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="graphics\Header Files">
+      <UniqueIdentifier>{e2cab4b7-edd4-448e-a41f-d69bc7059211}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="graphics\Source Files">
+      <UniqueIdentifier>{ba976017-0100-4fd0-a620-9c41365fd6c4}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="CMakeLists.txt" />
+    <None Include="include\the\graphics\directx\d3d11_rendering_behaviour.inl">
+      <Filter>graphics\directx\Header Files</Filter>
+    </None>
+    <None Include="thelib++.autopkg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\invalid_operation_exception.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\no_such_element_exception.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\not_implemented_exception.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\not_supported_exception.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\null_allocator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\single_allocator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stack_trace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\already_exists_exception.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\argument_exception.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\argument_null_exception.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\array_allocator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\exception.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\format_exception.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\index_out_of_range_exception.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\text\string_double_invariant_utility.cpp">
+      <Filter>text\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\text\string_find_utility.cpp">
+      <Filter>text\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\text\string_format_utility.cpp">
+      <Filter>text\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\text\string_hash_utility.cpp">
+      <Filter>text\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\text\string_levenshtein_distance.cpp">
+      <Filter>text\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\text\string_parse_utility.cpp">
+      <Filter>text\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\text\string_raw_data_utility.cpp">
+      <Filter>text\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\text\string_resource_utility.cpp">
+      <Filter>text\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\text\string_trim_utility.cpp">
+      <Filter>text\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\text\string_utf8_converter.cpp">
+      <Filter>text\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\text\string_utility.cpp">
+      <Filter>text\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\text\char_utility.cpp">
+      <Filter>text\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\text\locale_utility.cpp">
+      <Filter>text\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\text\string_builder.cpp">
+      <Filter>text\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\text\string_case_utility.cpp">
+      <Filter>text\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\text\string_compare_utility.cpp">
+      <Filter>text\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\text\string_converter.cpp">
+      <Filter>text\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\not_copyable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\not_instantiable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\system_exception.cpp">
+      <Filter>system\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\system_message.cpp">
+      <Filter>system\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\threading\critical_section.cpp">
+      <Filter>system\threading\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\threading\mutex.cpp">
+      <Filter>system\threading\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\threading\thread.cpp">
+      <Filter>system\threading\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\threading\thread_local.cpp">
+      <Filter>system\threading\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\trace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\abstract_point_impl.cpp">
+      <Filter>math\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\abstract_vector.cpp">
+      <Filter>math\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\abstract_vector_impl.cpp">
+      <Filter>math\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\point.cpp">
+      <Filter>math\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\shallow_point.cpp">
+      <Filter>math\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\shallow_vector.cpp">
+      <Filter>math\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\vector.cpp">
+      <Filter>math\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\abstract_point.cpp">
+      <Filter>math\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\types.cpp">
+      <Filter>math\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\functions.cpp">
+      <Filter>math\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\shallow_matrix.cpp">
+      <Filter>math\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\abstract_matrix.cpp">
+      <Filter>math\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\abstract_matrix_impl.cpp">
+      <Filter>math\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\matrix.cpp">
+      <Filter>math\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\quaternion.cpp">
+      <Filter>math\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\shallow_quaternion.cpp">
+      <Filter>math\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\abstract_quaternion.cpp">
+      <Filter>math\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\polynom.cpp">
+      <Filter>math\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\abstract_polynom.cpp">
+      <Filter>math\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\abstract_polynom_impl.cpp">
+      <Filter>math\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\pcautils.cpp">
+      <Filter>math\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\abstract_rectangle.cpp">
+      <Filter>math\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\rectangle.cpp">
+      <Filter>math\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\shallow_rectangle.cpp">
+      <Filter>math\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\threading\thread_local_ptr.cpp">
+      <Filter>system\threading\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\null_pointer_exception.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\threading\no_lock.cpp">
+      <Filter>system\threading\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\threading\runnable.cpp">
+      <Filter>system\threading\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\io\file.cpp">
+      <Filter>system\io\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\io\io_exception.cpp">
+      <Filter>system\io\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\graphics\directx\d2d_interop_surface.cpp">
+      <Filter>graphics\directx\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\com_exception.cpp">
+      <Filter>system\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\com_ptr.cpp">
+      <Filter>system\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\equatable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\comparable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\net\ip_address4.cpp">
+      <Filter>system\net\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\net\ip_address6.cpp">
+      <Filter>system\net\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\net\dns.cpp">
+      <Filter>system\net\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\net\socket_exception.cpp">
+      <Filter>system\net\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\system_string.cpp">
+      <Filter>system\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\shallow_size.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\size.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\graphics\directx\vertex_xyz.cpp">
+      <Filter>graphics\directx\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\net\ip_address.cpp">
+      <Filter>system\net\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\graphics\win32_window_behaviour.cpp">
+      <Filter>graphics\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\graphics\x11_window_behaviour.cpp">
+      <Filter>graphics\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\graphics\directx\d3d11_rendering_behaviour.cpp">
+      <Filter>graphics\directx\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\graphics\directx\dwrite_interop_surface.cpp">
+      <Filter>graphics\directx\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\graphics\directx\vertex_xyzw.cpp">
+      <Filter>graphics\directx\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\graphics\directx\vertex_xyzrs.cpp">
+      <Filter>graphics\directx\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\graphics\directx\vertex_xyzrst.cpp">
+      <Filter>graphics\directx\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\net\socket.cpp">
+      <Filter>system\net\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\threading\event.cpp">
+      <Filter>system\threading\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\threading\semaphore.cpp">
+      <Filter>system\threading\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\not_movable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\guid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\system_error.cpp">
+      <Filter>system\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\net\ip_end_point.cpp">
+      <Filter>system\net\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\net\end_point.cpp">
+      <Filter>system\net\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\performance_counter.cpp">
+      <Filter>system\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\system_information.cpp">
+      <Filter>system\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\threading\thread_pool.cpp">
+      <Filter>system\threading\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\io\ascii_file_buffer.cpp">
+      <Filter>system\io\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\version_number.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\abstract_size.cpp">
+      <Filter>math\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\abstract_size_impl.cpp">
+      <Filter>math\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\net\simple_message_base.cpp">
+      <Filter>system\net\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\net\shallow_simple_message.cpp">
+      <Filter>system\net\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\net\simple_message.cpp">
+      <Filter>system\net\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\blob.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\net\disconnected_exception.cpp">
+      <Filter>system\net\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\error_event_args.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\net\network_error_event_args.cpp">
+      <Filter>system\net\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\net\server_state_event_args.cpp">
+      <Filter>system\net\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\net\discovery_event_args.cpp">
+      <Filter>system\net\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\net\discovery_service.cpp">
+      <Filter>system\net\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\the\tchar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\unreferenced.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\assert.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\deprecated.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\argument_exception.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\argument_null_exception.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\array_allocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\delegate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\exception.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\format_exception.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\index_out_of_range_exception.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\invalid_operation_exception.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\no_such_element_exception.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\not_implemented_exception.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\not_supported_exception.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\null_allocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\single_allocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\stack_trace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\string.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\already_exists_exception.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\collections\ptr_array.h">
+      <Filter>collections\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\collections\array.h">
+      <Filter>collections\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\collections\array_element_dft_ctor.h">
+      <Filter>collections\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\collections\array_element_ptr_ctor.h">
+      <Filter>collections\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\collections\heap.h">
+      <Filter>collections\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\text\string_compare_utility.h">
+      <Filter>text\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\text\string_converter.h">
+      <Filter>text\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\text\string_double_invariant_utility.h">
+      <Filter>text\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\text\string_find_utility.h">
+      <Filter>text\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\text\string_format_utility.h">
+      <Filter>text\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\text\string_hash_utility.h">
+      <Filter>text\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\text\string_levenshtein_distance.h">
+      <Filter>text\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\text\string_parse_utility.h">
+      <Filter>text\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\text\string_raw_data_utility.h">
+      <Filter>text\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\text\string_resource_utility.h">
+      <Filter>text\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\text\string_trim_utility.h">
+      <Filter>text\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\text\string_utf8_converter.h">
+      <Filter>text\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\text\string_utility.h">
+      <Filter>text\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\text\char_utility.h">
+      <Filter>text\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\text\locale_utility.h">
+      <Filter>text\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\text\string_builder.h">
+      <Filter>text\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\collections\fast_forward_list.h">
+      <Filter>collections\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\not_copyable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\not_instantiable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\threading\critical_section.h">
+      <Filter>system\threading\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\threading\mutex.h">
+      <Filter>system\threading\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\threading\thread.h">
+      <Filter>system\threading\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\threading\thread_local.h">
+      <Filter>system\threading\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\system_exception.h">
+      <Filter>system\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\system_message.h">
+      <Filter>system\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\trace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\function_cast.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\math\abstract_point_impl.h">
+      <Filter>math\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\math\abstract_vector.h">
+      <Filter>math\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\force_inline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\math\abstract_vector_impl.h">
+      <Filter>math\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\math\point.h">
+      <Filter>math\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\math\shallow_point.h">
+      <Filter>math\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\math\shallow_vector.h">
+      <Filter>math\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\math\vector.h">
+      <Filter>math\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\math\abstract_point.h">
+      <Filter>math\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\math\types.h">
+      <Filter>math\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\math\functions.h">
+      <Filter>math\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\math\shallow_matrix.h">
+      <Filter>math\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\math\abstract_matrix.h">
+      <Filter>math\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\math\abstract_matrix_impl.h">
+      <Filter>math\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\math\matrix.h">
+      <Filter>math\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\math\quaternion.h">
+      <Filter>math\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\math\shallow_quaternion.h">
+      <Filter>math\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\math\abstract_quaternion.h">
+      <Filter>math\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\math\polynom.h">
+      <Filter>math\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\math\abstract_polynom.h">
+      <Filter>math\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\math\abstract_polynom_impl.h">
+      <Filter>math\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\math\pcautils.h">
+      <Filter>math\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\math\abstract_rectangle.h">
+      <Filter>math\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\math\rectangle.h">
+      <Filter>math\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\math\shallow_rectangle.h">
+      <Filter>math\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\threading\thread_local_ptr.h">
+      <Filter>system\threading\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\null_pointer_exception.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\threading\runnable.h">
+      <Filter>system\threading\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\threading\no_lock.h">
+      <Filter>system\threading\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\threading\auto_lock.h">
+      <Filter>system\threading\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\io\file.h">
+      <Filter>system\io\HeaderFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\io\io_exception.h">
+      <Filter>system\io\HeaderFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\graphics\directx\d2d_interop_surface.h">
+      <Filter>graphics\directx\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\com_exception.h">
+      <Filter>system\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\com_ptr.h">
+      <Filter>system\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\graphics\directx\debug.h">
+      <Filter>graphics\directx\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\equatable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\comparable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\ip_address4.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\features.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\address_family.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\protocol_family.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\ip_host_entry.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\ip_address6.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\dns.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\socket_exception.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\system_string.h">
+      <Filter>system\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\math\shallow_size.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\math\size.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\graphics\directx\vertex_xyz.h">
+      <Filter>graphics\directx\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\graphics\abstract_message_listener.h">
+      <Filter>graphics\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\ip_address.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\ip_address_base.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\collections\enumerator_base.h">
+      <Filter>collections\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\collections\const_enumerator.h">
+      <Filter>collections\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\graphics\win32_window_behaviour.h">
+      <Filter>graphics\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\graphics\window.h">
+      <Filter>graphics\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\graphics\x11_window_behaviour.h">
+      <Filter>graphics\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\graphics\directx\d3d11_rendering_behaviour.h">
+      <Filter>graphics\directx\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\graphics\rendering_window.h">
+      <Filter>graphics\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\memory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\graphics\directx\dwrite_interop_surface.h">
+      <Filter>graphics\directx\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\graphics\directx\vertex_xyzw.h">
+      <Filter>graphics\directx\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\graphics\directx\vertex_xyzrs.h">
+      <Filter>graphics\directx\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\graphics\directx\vertex_xyzrst.h">
+      <Filter>graphics\directx\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\graphics\directx\vertex_pos_base.h">
+      <Filter>graphics\directx\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\graphics\directx\vertex_pos_tex_base.h">
+      <Filter>graphics\directx\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\socket.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\socket_type.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\protocol.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\socket_option.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\socket_options.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\threading\runnable_thread.h">
+      <Filter>system\threading\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\threading\debug.h">
+      <Filter>system\threading\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\threading\event.h">
+      <Filter>system\threading\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\threading\semaphore.h">
+      <Filter>system\threading\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\not_movable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\guid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\reference_counted.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\intrusive_ptr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\text\string_case_utility.h">
+      <Filter>text\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\system_error.h">
+      <Filter>system\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\end_point.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\ip_end_point.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\multicast_delegate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\performance_counter.h">
+      <Filter>system\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\system_information.h">
+      <Filter>system\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\cmd_line_provider.h">
+      <Filter>system\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\observable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\threading\thread_pool.h">
+      <Filter>system\threading\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\io\ascii_file_buffer.h">
+      <Filter>system\io\HeaderFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\version_number.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\math\abstract_size.h">
+      <Filter>math\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\math\abstract_size_impl.h">
+      <Filter>math\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\stringize_macro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\debug.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\simple_message_base.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\shallow_simple_message.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\simple_message.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\blob.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\server.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\client_connected_event_args.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\server_configuration.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\shutdown_manifest.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\disconnected_exception.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\error_event_args.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\event_args.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\network_error_event_args.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\server_state_event_args.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\message_dispatcher_configuration.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\message_dispatcher.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\multi_sz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\discovery_service.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\the\system\net\discovery_event_args.h">
+      <Filter>system\net\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="License.txt" />
+  </ItemGroup>
+</Project>

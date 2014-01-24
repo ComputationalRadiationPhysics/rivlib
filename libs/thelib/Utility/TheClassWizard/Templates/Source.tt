@@ -1,0 +1,30 @@
+﻿<#@ template debug="true" hostSpecific="true" #>
+<#@ output extension=".cpp" #>
+<#@ include file=".\Parameters.ttinclude" #><#@ include file=".\Implementation.ttinclude" #><#
+    this.processParameters();
+#><#@ include file=".\Copyright.ttinclude" #>
+<#
+    this.WriteLine("#include \"" + string.Join(
+        Path.AltDirectorySeparatorChar.ToString(), this.nameList) + ".h\"");
+#>
+
+<#
+    if (string.IsNullOrWhiteSpace(this.templateDecl)) {
+#>
+#include "the/not_implemented_exception.h"
+#include "the/stack_trace.h"
+
+
+<#
+        this.renderImplementation();
+
+    } else {
+
+#>
+
+/*
+ * This file is intentionally empty.
+ */
+<#
+    } /* end if (string.IsNullOrWhiteSpace(this.templateDecl)) */
+#>
