@@ -31,6 +31,7 @@ cmake_minimum_required(VERSION 2.8)
 
 # Definition of the project name
 project(TheLib)
+#set(BUILD_TESTS 1)
 
 # set(CMAKE_VERBOSE_MAKEFILE ON)
 
@@ -81,4 +82,7 @@ add_library(thelib STATIC ${header_files} ${source_files})
 target_link_libraries(thelib pthread rt)
 
 # Add the test project as a dependent target
-add_subdirectory(test)
+if (BUILD_TESTS)
+	add_subdirectory(test)
+endif()
+

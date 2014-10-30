@@ -5,6 +5,7 @@ cmake_minimum_required(VERSION 2.8)
 
 project(vislib)
 set(BUILDING_VISLIB_PROJECT 1)
+#set(BUILD_TESTS 1)
 
 
 # processor word size detection
@@ -27,15 +28,18 @@ add_subdirectory(graphics)
 add_subdirectory(glutInclude)
 add_subdirectory(gl)
 
-add_subdirectory(test)
-add_subdirectory(glutTest)
+if (BUILD_TESTS)
+	add_subdirectory(test)
+	add_subdirectory(glutTest)
+endif ()
 
 add_dependencies(vislibmath${BITS} vislibbase${BITS})
 add_dependencies(vislibsys${BITS} vislibmath${BITS} vislibbase${BITS})
 add_dependencies(vislibnet${BITS} vislibsys${BITS} vislibmath${BITS} vislibbase${BITS})
 add_dependencies(vislibgraphics${BITS} vislibsys${BITS} vislibmath${BITS} vislibbase${BITS})
 add_dependencies(vislibgl${BITS} glutInclude vislibgraphics${BITS} vislibsys${BITS} vislibmath${BITS} vislibbase${BITS})
-add_dependencies(vislibtest vislibnet${BITS} vislibgraphics${BITS} vislibsys${BITS} vislibmath${BITS} vislibbase${BITS})
-add_dependencies(vislibgluttest glutInclude vislibgl${BITS} vislibgraphics${BITS} vislibsys${BITS} vislibmath${BITS} vislibbase${BITS})
-
+if (BUILD_TESTS)
+	add_dependencies(vislibtest vislibnet${BITS} vislibgraphics${BITS} vislibsys${BITS} vislibmath${BITS} vislibbase${BITS})
+	add_dependencies(vislibgluttest glutInclude vislibgl${BITS} vislibgraphics${BITS} vislibsys${BITS} vislibmath${BITS} vislibbase${BITS})
+endif ()
 
