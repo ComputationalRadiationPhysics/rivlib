@@ -13,7 +13,7 @@
 #include "test_render_window.h"
 //#include <GL/gl.h>
 #include "AntTweakBar.h"
-#include "visglut.h"
+#include "GL/freeglut.h"
 #include "rivlib/raw_image_data_binding.h"
 #include "the/text/string_builder.h"
 

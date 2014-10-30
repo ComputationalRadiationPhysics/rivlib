@@ -9,6 +9,8 @@ endif()
 
 #dependancies
 find_package(ZLIB REQUIRED)
+set(CMAKE_THREAD_PREFER_PTHREAD)
+find_package(Threads REQUIRED)
 
 #input file
 file(GLOB_RECURSE header_files RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" "include/*.h")
@@ -34,7 +36,6 @@ target_link_libraries(rivlib
 	${VISLIB_NET}
 	${VISLIB_MATH}
 	${VISLIB_GRAPHICS}
-	${VISLIB_GL}
 	${ZLIB_LIBRARIES}
-	pthread rt)
+	${CMAKE_THREAD_LIBS_INIT} -lrt)
 

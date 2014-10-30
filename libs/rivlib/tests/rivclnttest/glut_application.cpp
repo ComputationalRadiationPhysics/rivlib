@@ -13,7 +13,7 @@
 #include "the/config.h"
 #include "the/exception.h"
 #include "the/system/io/ascii_file_buffer.h"
-#include "visglut.h"
+#include "GL/freeglut.h"
 #include "AntTweakBar.h"
 #include "riv_client_window.h"
 

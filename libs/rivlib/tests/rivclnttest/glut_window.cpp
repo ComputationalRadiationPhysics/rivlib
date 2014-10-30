@@ -7,7 +7,7 @@
 
 #include "stdafx.h"
 #include "glut_window.h"
-#include "visglut.h"
+#include "GL/freeglut.h"
 #include "GL/gl.h"
 #include "AntTweakBar.h"
 #include "the/math/functions.h"

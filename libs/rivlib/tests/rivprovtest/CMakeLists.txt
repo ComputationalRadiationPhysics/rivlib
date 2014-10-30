@@ -7,15 +7,17 @@ if (NOT DEFINED BUILDING_RIV_PROJECT)
 	message(FATAL_ERROR "This CMakefile cannot be processed independently.")
 endif()
 
+
 #input file
 file(GLOB header_files RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" "./*.h")
 file(GLOB source_files RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" "./*.cpp")
+
 
 # include directories
 include_directories("../../rivlib/include"
 	${THELIB_INCLUDE_DIRS}
 	${VISLIB_INCLUDE_DIRS}
-	${VISGLUT_INCLUDE_DIRS}
+	${GLUT_INCLUDE_DIR}
 	${ANTTWEAKBAR_INCLUDE_DIRS}
 	${OPENGL_INCLUDE_DIRS}
 	)
@@ -26,7 +28,7 @@ add_definitions(-std=c++0x -pedantic -fPIC -DUNIX)
 # target definition
 add_executable(rivprovtest ${header_files} ${source_files})
 target_link_libraries(rivprovtest
-	${RIVLIB}
+	rivlib
 	${THELIB}
 	${VISLIB_BASE}
 	${VISLIB_SYS}
@@ -34,8 +36,9 @@ target_link_libraries(rivprovtest
 	${VISLIB_MATH}
 	${VISLIB_GRAPHICS}
 	${VISLIB_GL}
-	${VISGLUT}
+	${GLUT_LIBRARIES}
 	${ANTTWEAKBAR}
 	${OPENGL_LIBRARIES}
-	pthread rt)
+	${CMAKE_THREAD_LIBS_INIT}
+	-lrt)
 
