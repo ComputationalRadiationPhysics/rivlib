@@ -21,9 +21,9 @@ if (BUILD_TESTS)
     set(ANTTWEAKBAR_DIR /home/grottel/dev/insituvolvis/libs/AntTweakBar/)
 endif()
 
-
 set(THELIB_INCLUDE_DIRS ${THELIB_DIR}include/)
 set(THELIB_LIBRARIES ${THELIB_DIR}build/)
+
 set(VISLIB_INCLUDE_DIRS
 	${VISLIB_DIR}base/include/
 	${VISLIB_DIR}sys/include/
