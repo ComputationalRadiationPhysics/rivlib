@@ -53,7 +53,7 @@
 #define VISLIB_NET_REVISION         0
 #define VISLIB_SYS_REVISION         0
 
-#if 1
+#if 0
 #define VISLIB_DIRTY_BUILD 1
 #endif
 

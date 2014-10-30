@@ -8,10 +8,10 @@
 #
 
 ifeq ($(BITS), 64)
-	LDFLAGS += -L/home/schnei49/libs/visglut/freeglut/lib/lin64d -lfreeglut
+	LDFLAGS += -L/home/grottel/dev/insituvolvis/libs/visglut/freeglut/lib/lin64d -lfreeglut
 else
-	LDFLAGS += -L/home/schnei49/libs/visglut/freeglut/lib/lin32d -lfreeglut
+	LDFLAGS += -L/home/grottel/dev/insituvolvis/libs/visglut/freeglut/lib/lin32d -lfreeglut
 endif
 
-IncludeDir += /home/schnei49/libs/visglut/include \
-              /home/schnei49/libs/visglut/freeglut/include
+IncludeDir += /home/grottel/dev/insituvolvis/libs/visglut/include \
+              /home/grottel/dev/insituvolvis/libs/visglut/freeglut/include

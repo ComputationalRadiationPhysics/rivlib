@@ -10,11 +10,11 @@ set(BUILD_TESTS 1)
 #set(CMAKE_VERBOSE_MAKEFILE ON)
 
 # some manual external dependancies
-set(THELIB_DIR /home/matt/University/SHK/git-branches/insituvolvis/libs/thelib/thelib++/)
-set(VISLIB_DIR /home/matt/University/SHK/git-branches/insituvolvis/libs/vislib/)
-set(VISGLUT_DIR /home/matt/University/SHK/git-branches/insituvolvis/libs/visglut/)
+set(THELIB_DIR /home/grottel/dev/insituvolvis/libs/thelib/thelib++/)
+set(VISLIB_DIR /home/grottel/dev/insituvolvis/libs/vislib/)
+set(VISGLUT_DIR /home/grottel/dev/insituvolvis/libs/visglut/)
 if (BUILD_TESTS)
-    set(ANTTWEAKBAR_DIR /home/matt/University/SHK/insituvolvis-rivlibs/libs/AntTweakBar/)
+    set(ANTTWEAKBAR_DIR /home/grottel/dev/insituvolvis/libs/AntTweakBar/)
 endif()
 
 set(THELIB_INCLUDE_DIRS ${THELIB_DIR}include/)
