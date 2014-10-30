@@ -1,5 +1,5 @@
 /*
- * the/system/threading/thread_local.h
+ * the/system/threading/thread_local_t.h
  *
  * Copyright (c) 2012, TheLib Team (http://www.thelib.org/license)
  * All rights reserved.
@@ -70,7 +70,7 @@ namespace threading {
      * @param T The type of the variable, which must not be larger than a 
      *          pointer.
      */
-    template<class T> class thread_local : public not_copyable {
+    template<class T> class thread_local_t : public not_copyable {
 
     public:
 
@@ -80,7 +80,7 @@ namespace threading {
 #elif defined(THE_LINUX)
         typedef pthread_key_t native_index_type;
 #else /* defined(THE_WINDOWS) */
-#error "the::system::threading::thread_local must define native_index_type!"
+#error "the::system::threading::thread_local_t must define native_index_type!"
 #endif /* defined(THE_WINDOWS) */
 
         /** The type of data stored in TLS. */
@@ -89,12 +89,12 @@ namespace threading {
         /**
          * Ctor.
          */
-        thread_local(void) throw();
+        thread_local_t(void) throw();
 
         /**
          * Dtor.
          */
-        virtual ~thread_local(void);
+        virtual ~thread_local_t(void);
 
         /**
          * Get the current value of the TLS variable.
@@ -178,7 +178,7 @@ namespace threading {
          *                               acquired lazily or in case that the
          *                               value could not be written.
          */
-        thread_local& operator =(const value_type& value);
+        thread_local_t& operator =(const value_type& value);
 
     protected:
 
@@ -221,9 +221,9 @@ namespace threading {
 
 
 /*
- * the::system::threading::thread_local<T>::thread_local
+ * the::system::threading::thread_local_t<T>::thread_local_t
  */
-template<class T> the::system::threading::thread_local<T>::thread_local(void)
+template<class T> the::system::threading::thread_local_t<T>::thread_local_t(void)
         throw() :
 #if defined(THE_WINDOWS)
         index(TLS_OUT_OF_INDEXES) 
@@ -237,9 +237,9 @@ template<class T> the::system::threading::thread_local<T>::thread_local(void)
 
 
 /*
- * the::system::threading::thread_local<T>::~thread_local
+ * the::system::threading::thread_local_t<T>::~thread_local_t
  */
-template<class T> the::system::threading::thread_local<T>::~thread_local(void) {
+template<class T> the::system::threading::thread_local_t<T>::~thread_local_t(void) {
     THE_STACK_TRACE;
     if (this->is_initialised()) {
 #if defined(THE_WINDOWS)
@@ -254,10 +254,10 @@ template<class T> the::system::threading::thread_local<T>::~thread_local(void) {
 
 
 /*
- * the::system::threading::thread_local<T>::operator =
+ * the::system::threading::thread_local_t<T>::operator =
  */
-template<class T> the::system::threading::thread_local<T>& 
-the::system::threading::thread_local<T>::operator =(const value_type& value) {
+template<class T> the::system::threading::thread_local_t<T>& 
+the::system::threading::thread_local_t<T>::operator =(const value_type& value) {
     THE_STACK_TRACE;
     void *v = const_cast<void *>(reinterpret_cast<const void *>(value));
 
@@ -280,10 +280,10 @@ the::system::threading::thread_local<T>::operator =(const value_type& value) {
 
 
 /*
- * the::system::threading::thread_local<T>::initialise
+ * the::system::threading::thread_local_t<T>::initialise
  */
 template<class T> 
-void the::system::threading::thread_local<T>::initialise(void) {
+void the::system::threading::thread_local_t<T>::initialise(void) {
     THE_STACK_TRACE;
     if (!this->is_initialised()) {
 #if defined(THE_WINDOWS)
@@ -301,12 +301,12 @@ void the::system::threading::thread_local<T>::initialise(void) {
 
 
 /*
- * the::system::threading::thread_local<T>::get0
+ * the::system::threading::thread_local_t<T>::get0
  */
-template<class T> void *the::system::threading::thread_local<T>::get0(void) {
+template<class T> void *the::system::threading::thread_local_t<T>::get0(void) {
     THE_STACK_TRACE;
     if (!this->is_initialised()) {
-        throw invalid_operation_exception(_T("A thread_local variable cannot ")
+        throw invalid_operation_exception(_T("A thread_local_t variable cannot ")
             _T("be read unless it has been initialised."), __FILE__, __LINE__);
     }
 

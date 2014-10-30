@@ -209,7 +209,7 @@ namespace threading {
     private:
 
         /** The underlying thread-local storage. */
-        thread_local<pointer_type> tls;
+        thread_local_t<pointer_type> tls;
 
     };
 
