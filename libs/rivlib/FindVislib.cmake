@@ -30,8 +30,12 @@ set(VISLIB_SEARCH_PATHS
 	)
 
 set(LIB_PATH_SUFFIXES lib lib64 build)
+if (CMAKE_BUILD_TYPE)
 if (${CMAKE_BUILD_TYPE} STREQUAL "Debug")
 	set(LIB_PATH_SUFFIXES ${LIB_PATH_SUFFIXES} debug release)
+else()
+	set(LIB_PATH_SUFFIXES ${LIB_PATH_SUFFIXES} release debug)
+endif()
 else()
 	set(LIB_PATH_SUFFIXES ${LIB_PATH_SUFFIXES} release debug)
 endif()

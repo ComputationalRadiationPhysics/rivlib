@@ -17,8 +17,12 @@ FIND_PATH(THELIB_INCLUDE_DIRS the/stringize_macro.h
 #message(STATUS ${CMAKE_BUILD_TYPE})
 
 set(LIB_PATH_SUFFIXES lib lib64 build)
+if (CMAKE_BUILD_TYPE)
 if (${CMAKE_BUILD_TYPE} STREQUAL "Debug")
 	set(LIB_PATH_SUFFIXES ${LIB_PATH_SUFFIXES} debug release)
+else()
+	set(LIB_PATH_SUFFIXES ${LIB_PATH_SUFFIXES} release debug)
+endif()
 else()
 	set(LIB_PATH_SUFFIXES ${LIB_PATH_SUFFIXES} release debug)
 endif()
