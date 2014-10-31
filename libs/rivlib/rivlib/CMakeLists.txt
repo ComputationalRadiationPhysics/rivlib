@@ -30,7 +30,7 @@ add_definitions(-std=c++0x -pedantic -fPIC -DRIVLIB_EXPORTS=1 -DUNIX)
 add_library(rivlib SHARED ${header_files} ${source_files})
 #add_library(rivlib STATIC ${header_files} ${source_files})
 target_link_libraries(rivlib
-	${THELIB}
+	${THELIB_LIBRARY}
 	${VISLIB_BASE}
 	${VISLIB_SYS}
 	${VISLIB_NET}

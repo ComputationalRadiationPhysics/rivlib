@@ -18,7 +18,7 @@ include_directories("../../rivlib/include"
 	${THELIB_INCLUDE_DIRS}
 	${VISLIB_INCLUDE_DIRS}
 	${GLUT_INCLUDE_DIR}
-	${ANTTWEAKBAR_INCLUDE_DIRS}
+	${ANT_TWEAK_BAR_INCLUDE_PATH}
 	${OPENGL_INCLUDE_DIRS}
 	)
 
@@ -29,7 +29,7 @@ add_definitions(-std=c++0x -pedantic -fPIC -DUNIX)
 add_executable(rivclnttest ${header_files} ${source_files})
 target_link_libraries(rivclnttest
 	rivlib
-	${THELIB}
+	${THELIB_LIBRARY}
 	${VISLIB_NET}
 	${VISLIB_SYS}
 	${VISLIB_BASE}
@@ -37,7 +37,7 @@ target_link_libraries(rivclnttest
 	${VISLIB_GRAPHICS}
 	${VISLIB_GL}
 	${GLUT_LIBRARIES}
-	${ANTTWEAKBAR}
+	${ANT_TWEAK_BAR_LIBRARY}
 	${OPENGL_LIBRARIES}
 	${CMAKE_THREAD_LIBS_INIT}
 	-lrt)
