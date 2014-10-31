@@ -39,3 +39,10 @@ target_link_libraries(rivlib
 	${ZLIB_LIBRARIES}
 	${CMAKE_THREAD_LIBS_INIT} -lrt)
 
+
+INSTALL(TARGETS rivlib
+	RUNTIME DESTINATION bin
+	LIBRARY DESTINATION lib
+	ARCHIVE DESTINATION lib )
+INSTALL(FILES ${header_files} DESTINATION "include/rivlib" )
+
