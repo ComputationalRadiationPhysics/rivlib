@@ -29,7 +29,7 @@ if (BUILD_TESTS)
     add_subdirectory(tests)
 endif()
 
-# hacked: install extra vislib files
+# hacked: install extra vislib & thelib files
 file(GLOB_RECURSE vislib_extra ${CMAKE_SOURCE_DIR}/../vislib/release/*.a)
 message(STATUS "Files: ${vislib_extra}")
 INSTALL(FILES ${vislib_extra} DESTINATION lib)
@@ -39,3 +39,5 @@ INSTALL(FILES ${vislib_extra} DESTINATION lib)
 #  base/libvislibbase64.a
 #  sys/libvislibsys64.a
 #  graphics/libvislibgraphics64.a
+
+INSTALL(FILES ${CMAKE_SOURCE_DIR}/../thelib++/release/libthelib.a DESTINATION lib)
