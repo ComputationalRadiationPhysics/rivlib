@@ -41,3 +41,9 @@ INSTALL(FILES ${vislib_extra} DESTINATION lib)
 #  graphics/libvislibgraphics64.a
 
 INSTALL(FILES ${CMAKE_SOURCE_DIR}/../thelib++/release/libthelib.a DESTINATION lib)
+# copy include folder to install folder
+INSTALL(DIRECTORY "${CMAKE_SOURCE_DIR}/../thelib++/include/."
+  DESTINATION include
+  PATTERN ".svn" EXCLUDE
+  PATTERN ".git" EXCLUDE
+)
