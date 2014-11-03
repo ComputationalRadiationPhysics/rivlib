@@ -2,3 +2,10 @@
 /nbproject/
 libs/vislib/glutInclude/glutInclude.lin.h
 
+# build
+libs/thelib++/debug/
+libs/thelib++/release/
+libs/vislib/debug/
+libs/vislib/release/
+libs/rivlib/debug/
+libs/rivlib/release/
