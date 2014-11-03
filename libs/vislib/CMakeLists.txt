@@ -4,6 +4,8 @@
 cmake_minimum_required(VERSION 2.8)
 
 project(vislib)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}")
+
 set(BUILDING_VISLIB_PROJECT 1)
 #set(BUILD_TESTS 1)
 
@@ -19,6 +21,7 @@ endif(CMAKE_SIZEOF_VOID_P EQUAL 8)
 # compiler options
 add_definitions(-std=c++11 -Wall -pedantic -ansi -fPIC -DUNIX -D_GNU_SOURCE -D_LIN${BITS} )
 
+find_package(UUID REQUIRED)
 
 add_subdirectory(base)
 add_subdirectory(math)
