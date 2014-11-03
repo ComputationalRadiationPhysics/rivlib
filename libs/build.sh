@@ -2,6 +2,8 @@
 #
 # Build script
 #
+# Debian/Ubuntu:
+#   apt-get install libxmu-dev libxi-dev zlib1g-dev uuid-dev cmake
 
 cd vislib
 rm -rf release
