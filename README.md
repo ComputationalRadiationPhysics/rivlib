@@ -14,4 +14,5 @@ cd rivlib/release
 ```bash
 export RIVLIB_ROOT=<INSTALL_PREFIX>
 export VISLIB_ROOT=$RIVLIB_ROOT
+export THELIB_ROOT=$RIVLIB_ROOT
 ```
