@@ -12,6 +12,16 @@ cd rivlib/release
 [sudo] make install
 ```
 
+## Known Issues
+
+If you use older `gcc` versions such as `4.6.2` on Hypnos, modify the file `/libs/vislib/CMakeLists.txt:22` to use `-std=c++0x` instead of `-std=c++11`.
+
+On some systems, you might have to export
+```bash
+export CMAKE_PREFIX_PATH=/usr/lib/x86_64-linux-gnu/
+```
+so `<uuid/uuid.h>` and other shared libs can be found.
+
 ## Set Env
 
 ```bash
