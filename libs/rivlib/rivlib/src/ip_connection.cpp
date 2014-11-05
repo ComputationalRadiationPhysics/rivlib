@@ -120,6 +120,11 @@ int ip_connection::run(void) {
         delete[] request;
 
         this->log().info("ip_connection: request to \"%s\"", req.c_str());
+
+        // avoid seqfaults on empty req strings
+        if( req.empty() )
+            return 1;
+
         std::string scheme, req_user, host, req_path, req_query, req_fragment;
         bool is_host_v6, is_host_port_set;
         unsigned short host_port;
