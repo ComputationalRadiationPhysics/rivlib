@@ -152,6 +152,12 @@ std::vector<data_channel_info> provider_impl::query_channels(void) {
         if (ridbi != nullptr) {
             // TODO: Enumerate through available image data encoders
 
+            //
+            // Note:
+            //  The quality numbers will controll which encoder wil be used.
+            //  Usually the encoder with the highest number will be used.
+            //
+
             data_channel_info dci;
             uintptr_t ptr = reinterpret_cast<uintptr_t>(dbs[i].get());
             unsigned char buf[sizeof(uintptr_t)];
@@ -171,6 +177,16 @@ std::vector<data_channel_info> provider_impl::query_channels(void) {
             dci.type = data_channel_type::image_stream;
             dci.subtype.image_stream = data_channel_image_stream_subtype::rgb_zip;
             dci.quality = 16; // not good; compressed, but high latency
+
+            rv.push_back(dci);
+
+            ptr = reinterpret_cast<uintptr_t>(dbs[i].get());
+            ::memcpy(buf, &ptr, sizeof(uintptr_t));
+            dci.name = the::text::string_utility::to_hex_astring(buf, sizeof(uintptr_t));
+
+            dci.type = data_channel_type::image_stream;
+            dci.subtype.image_stream = data_channel_image_stream_subtype::rgb_mjpeg;
+            dci.quality = 24; // ok; compressed, some latency
 
             rv.push_back(dci);
 

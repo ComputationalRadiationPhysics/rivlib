@@ -70,6 +70,9 @@ namespace rivlib {
         /** zlib-compressed rgb images */
         rgb_zip = 2,
 
+        /** jpeg-compressed rgb images */
+        rgb_mjpeg = 3,
+
     };
 
 

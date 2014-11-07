@@ -189,6 +189,9 @@
     <ClCompile Include="src\encoder\image_encoder_rgb_zip.cpp">
       <Filter>encoder\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\encoder\image_encoder_rgb_mjpeg.cpp">
+      <Filter>encoder\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\stdafx.h">
@@ -345,6 +348,9 @@
       <Filter>data\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\encoder\image_encoder_rgb_zip.h">
+      <Filter>encoder\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\encoder\image_encoder_rgb_mjpeg.h">
       <Filter>encoder\Header Files</Filter>
     </ClInclude>
   </ItemGroup>

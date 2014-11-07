@@ -18,7 +18,8 @@ namespace data {
         invalid,
         raw_rgb_bytes,
         raw_bgr_bytes,
-        zip_rgb_bytes
+        zip_rgb_bytes,
+        mjpeg_rgb_bytes
     };
 
 

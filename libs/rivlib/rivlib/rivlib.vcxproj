@@ -50,6 +50,7 @@
     <ClCompile Include="src\dllmain.cpp" />
     <ClCompile Include="src\element_node.cpp" />
     <ClCompile Include="src\encoder\image_encoder_base.cpp" />
+    <ClCompile Include="src\encoder\image_encoder_rgb_mjpeg.cpp" />
     <ClCompile Include="src\encoder\image_encoder_rgb_raw.cpp" />
     <ClCompile Include="src\encoder\image_encoder_rgb_zip.cpp" />
     <ClCompile Include="src\encoder\image_request.cpp" />
@@ -108,6 +109,7 @@
     <ClInclude Include="src\data_channel_info.h" />
     <ClInclude Include="src\element_node.h" />
     <ClInclude Include="src\encoder\image_encoder_base.h" />
+    <ClInclude Include="src\encoder\image_encoder_rgb_mjpeg.h" />
     <ClInclude Include="src\encoder\image_encoder_rgb_raw.h" />
     <ClInclude Include="src\encoder\image_encoder_rgb_zip.h" />
     <ClInclude Include="src\encoder\image_request.h" />
