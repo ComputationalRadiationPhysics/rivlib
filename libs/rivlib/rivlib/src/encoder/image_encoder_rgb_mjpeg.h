@@ -36,6 +36,26 @@ namespace encoder {
          */
         data::buffer::shared_ptr decode(data::buffer::shared_ptr data);
 
+        /**
+         * Answer the compression quality setting, that will be used when
+         * encoding the image.
+         *
+         * @return The compression quality setting [0..100]
+         */
+        inline unsigned int CompressionQuality(void) const {
+            return this->quality;
+        }
+
+        /**
+         * Sets the compression quality. Values will be clamped to [0..100].
+         * Larger values result in higher quality and large file sizes.
+         *
+         * @param q The new value for the compression quality
+         */
+        inline void SetCompressionQuality(unsigned int q) {
+            this->quality = (q < 100) ? q : 100;
+        }
+
     protected:
 
         /**
@@ -46,6 +66,11 @@ namespace encoder {
          * @return The encoded data
          */
         virtual data::buffer::shared_ptr encode(data::buffer::shared_ptr data);
+
+    private:
+
+        /** The compression quality setting [0..100] */
+        unsigned int quality;
 
     };
 
