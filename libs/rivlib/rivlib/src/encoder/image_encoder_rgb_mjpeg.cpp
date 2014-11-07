@@ -25,7 +25,7 @@ namespace _internal {
     /**
      * Convert "exit" to "throw"
      */
-    void jpeg_error_exit_throw(j_common_ptr cinfo) {
+    static void jpeg_error_exit_throw(j_common_ptr cinfo) {
         char buffer[JMSG_LENGTH_MAX];
         (*cinfo->err->format_message)(cinfo, buffer);
         vislib::StringA msg(buffer);
@@ -36,7 +36,7 @@ namespace _internal {
     /**
      * block any warning, trace, error of libJpeg
      */
-    void jpeg_output_message_no(j_common_ptr cinfo) {
+    static void jpeg_output_message_no(j_common_ptr cinfo) {
         // be silent!
     }
 
@@ -49,7 +49,8 @@ namespace _internal {
 /*
  * encoder::image_encoder_rgb_mjpeg::image_encoder_rgb_mjpeg
  */
-encoder::image_encoder_rgb_mjpeg::image_encoder_rgb_mjpeg(void) : image_encoder_base() {
+encoder::image_encoder_rgb_mjpeg::image_encoder_rgb_mjpeg(void)
+        : image_encoder_base(), quality(10) {
     // intentionally empty
 }
 
@@ -241,36 +242,28 @@ data::buffer::shared_ptr encoder::image_encoder_rgb_mjpeg::encode(data::buffer::
         }
         data->set_type(data::buffer_type::raw_rgb_bytes);
     }
+    ASSERT(data->type() == data::buffer_type::raw_rgb_bytes);
 
     o->set_time_code(data->time_code());
     o->set_type(data::buffer_type::mjpeg_rgb_bytes);
     o->metadata() = data->metadata();
 
-#if 0
-
-    using vislib::graphics::BitmapImage;
     struct jpeg_compress_struct cinfo;
     struct jpeg_error_mgr jerr;
 
     cinfo.err = jpeg_std_error(&jerr);
-    cinfo.err->error_exit = jpegutil::jpeg_error_exit_throw;
-    cinfo.err->output_message = jpegutil::jpeg_output_message_no;
+    cinfo.err->error_exit = _internal::jpeg_error_exit_throw;
+    cinfo.err->output_message = _internal::jpeg_output_message_no;
     ::jpeg_create_compress(&cinfo);
 
     unsigned char *buf = NULL;
     unsigned long bufSize = 0;
     ::jpeg_mem_dest(&cinfo, &buf, &bufSize);
 
-    const BitmapImage *src = &(this->image());
-    vislib::SmartPtr<BitmapImage> alt;
-    if (!src->EqualChannelLayout(BitmapImage::TemplateByteRGB)) {
-        alt = new BitmapImage();
-        alt->ConvertFrom(*src, BitmapImage::TemplateByteRGB);
-        src = alt.operator->();
-    }
+    data::image_buffer_metadata *ibm = data->metadata().as<data::image_buffer_metadata>();
 
-    cinfo.image_width = src->Width();
-    cinfo.image_height = src->Height();
+    cinfo.image_width = ibm->width;
+    cinfo.image_height = ibm->height;
     cinfo.input_components = 3;
     cinfo.in_color_space = JCS_RGB;
     ::jpeg_set_defaults(&cinfo);
@@ -279,68 +272,20 @@ data::buffer::shared_ptr encoder::image_encoder_rgb_mjpeg::encode(data::buffer::
     ::jpeg_start_compress(&cinfo, TRUE);
 
     JSAMPROW rowPointer[1];
-    int rowStride = src->Width() * 3;
-    rowPointer[0] = const_cast<JSAMPLE*>(src->PeekDataAs<JSAMPLE>());
+    int rowStride = ibm->width * 3;
+    rowPointer[0] = const_cast<JSAMPLE*>(data->data().as<JSAMPLE>());
 
-    for (unsigned int y = 0; y < src->Height(); y++, rowPointer[0] += rowStride) {
+    for (unsigned int y = 0; y < ibm->height; y++, rowPointer[0] += rowStride) {
         ::jpeg_write_scanlines(&cinfo, rowPointer, 1);
     }
 
     ::jpeg_finish_compress(&cinfo);
     ::jpeg_destroy_compress(&cinfo);
-    mem.EnforceSize(bufSize);
-    ::memcpy(mem, buf, bufSize);
+
+    o->data().enforce_size(bufSize);
+    ::memcpy(o->data(), buf, bufSize);
+
     ::free(buf);
 
-    return true;
-
-#endif
-
-    THROW_THE_NOT_IMPLEMENTED_EXCEPTION;
-
-    /*
-    // compress data using zlib's deflate
-    const int zlib_comp_level = Z_DEFAULT_COMPRESSION; // acceptable
-    int ret;
-    z_stream strm;
-
-    // allocate deflate state
-    strm.zalloc = Z_NULL;
-    strm.zfree = Z_NULL;
-    strm.opaque = Z_NULL;
-    ret = deflateInit(&strm, zlib_comp_level);
-    if (ret != Z_OK) throw the::exception("failed zlib::deflateInit", __FILE__, __LINE__);
-
-    strm.avail_in = data->data().size();
-    strm.next_in = data->data().as<unsigned char>();
-
-    o->data().assert_size(data->data().size());
-    o->data().assert_size(256 * 1024);
-    size_t pos = 0;
-
-    // run deflate() on input until output buffer not full, finish
-    //  compression if all of source has been read in
-    do {
-        if (pos >= o->data().size()) {
-            o->data().assert_size(o->data().size() * 2, true);
-        }
-
-        strm.avail_out = o->data().size() - pos;
-        strm.next_out = o->data().as_at<unsigned char>(pos);
-
-        ret = deflate(&strm, Z_FINISH);     // no bad return value
-        THE_ASSERT(ret != Z_STREAM_ERROR);  // state not clobbered
-        pos += (o->data().size() - pos) - strm.avail_out;
-
-    } while (ret != Z_STREAM_END);
-    THE_ASSERT(strm.avail_in == 0);         // all input was be used
-
-    deflateEnd(&strm);
-
-    // TODO: This makes all the effort before obsolete.
-    //  We will change this on store an explicit "valid_size" for the data block as a whole when refactoring the buffer class.
-    o->data().enforce_size(pos, true);
-
     return o;
-    */
 }

@@ -8,7 +8,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>$(thelibpath)thelib++\include\;$(vislibpath)base\include\;$(vislibpath)sys\include\;$(vislibpath)net\include\;$(vislibpath)math\include\;$(vislibpath)graphics\include\;$(vislibpath)gl\include\;$(visglutpath)include\;$(anttweakbarpath)include\;$(zlibpath)include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(thelibpath)thelib++\include\;$(vislibpath)base\include\;$(vislibpath)sys\include\;$(vislibpath)net\include\;$(vislibpath)math\include\;$(vislibpath)graphics\include\;$(vislibpath)gl\include\;$(visglutpath)include\;$(anttweakbarpath)include\;$(zlibpath)include\;$(jpegpath)include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(thelibpath)thelib++\lib\win$(Bits)\$(Configuration)\;$(vislibpath)lib\;$(visglutpath)lib\;$(anttweakbarpath)lib\;$(zlibpath)lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
