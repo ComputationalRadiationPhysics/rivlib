@@ -11,6 +11,8 @@
 #include "data/image_buffer_metadata.h"
 #include "the/text/string_builder.h"
 #include <algorithm>
+#include "vislib/types.h"
+#define XMD_H
 #include "jpeglib.h"
 #include "vislib/String.h"
 
@@ -177,6 +179,8 @@ data::buffer::shared_ptr encoder::image_encoder_rgb_mjpeg::decode(data::buffer::
     ::jpeg_finish_decompress(&cinfo);
     ::jpeg_destroy_decompress(&cinfo);
 #endif
+
+printf("Gackhere!\n");
 
     THROW_THE_NOT_IMPLEMENTED_EXCEPTION;
 

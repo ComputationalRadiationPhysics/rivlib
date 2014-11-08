@@ -11,6 +11,7 @@ endif()
 find_package(ZLIB REQUIRED)
 set(CMAKE_THREAD_PREFER_PTHREAD)
 find_package(Threads REQUIRED)
+find_package(JPEG REQUIRED)
 
 #input file
 file(GLOB_RECURSE header_files RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" "include/*.h")
@@ -21,6 +22,7 @@ include_directories("include" "src"
 	${THELIB_INCLUDE_DIRS}
 	${VISLIB_INCLUDE_DIRS}
 	${ZLIB_INCLUDE_DIRS}
+	${JPEG_INCLUDE_DIR}
 	)
 
 # compiler options
@@ -37,6 +39,7 @@ target_link_libraries(rivlib
 	${VISLIB_MATH}
 	${VISLIB_GRAPHICS}
 	${ZLIB_LIBRARIES}
+	${JPEG_LIBRARIES}
 	${CMAKE_THREAD_LIBS_INIT} -lrt)
 
 
