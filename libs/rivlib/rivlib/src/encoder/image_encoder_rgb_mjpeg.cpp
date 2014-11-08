@@ -52,7 +52,7 @@ namespace _internal {
  * encoder::image_encoder_rgb_mjpeg::image_encoder_rgb_mjpeg
  */
 encoder::image_encoder_rgb_mjpeg::image_encoder_rgb_mjpeg(void)
-        : image_encoder_base(), quality(10) {
+        : image_encoder_base(), quality(90) {
     // intentionally empty
 }
 
@@ -76,21 +76,20 @@ data::buffer::shared_ptr encoder::image_encoder_rgb_mjpeg::decode(data::buffer::
     o->set_type(data::buffer_type::raw_rgb_bytes);
     o->metadata() = data->metadata();
 
-#if 0
     struct jpeg_decompress_struct cinfo;
     struct jpeg_error_mgr jerr;
 
     cinfo.err = ::jpeg_std_error(&jerr);
-    cinfo.err->error_exit = jpegutil::jpeg_error_exit_throw;
-    cinfo.err->output_message = jpegutil::jpeg_output_message_no;
+    cinfo.err->error_exit = _internal::jpeg_error_exit_throw;
+    cinfo.err->output_message = _internal::jpeg_output_message_no;
     ::jpeg_create_decompress(&cinfo);
-    ::jpeg_mem_src(&cinfo,
-        static_cast<unsigned char*>(const_cast<void*>(mem)),
-        static_cast<unsigned long>(size));
+    ::jpeg_mem_src(&cinfo, data->data().as<unsigned char>(),
+        static_cast<unsigned long>(data->data().size()));
+
 
     if (::jpeg_read_header(&cinfo, TRUE) != 1) {
         ::jpeg_destroy_decompress(&cinfo);
-        return false;
+	throw vislib::Exception("jpeg decode header error", __FILE__, __LINE__);
     }
 
     /* set parameters for decompression */
@@ -100,131 +99,34 @@ data::buffer::shared_ptr encoder::image_encoder_rgb_mjpeg::decode(data::buffer::
 
     if (!::jpeg_start_decompress(&cinfo)) {
         ::jpeg_destroy_decompress(&cinfo);
-        return false;
+	throw vislib::Exception("jpeg decode error", __FILE__, __LINE__);
     }
 
     if (sizeof(JSAMPLE) != 1) { // only support 8-bit jpegs ATM
         ::jpeg_destroy_decompress(&cinfo);
-        return false;
+	throw vislib::Exception("jpeg decode error", __FILE__, __LINE__);
     }
     if (cinfo.output_components < 1) {
         ::jpeg_destroy_decompress(&cinfo);
-        return false;
+	throw vislib::Exception("jpeg decode error", __FILE__, __LINE__);
     }
-
-    this->image().CreateImage(cinfo.output_width, cinfo.output_height, cinfo.output_components, BitmapImage::CHANNELTYPE_BYTE);
-    switch (cinfo.out_color_space) {
-        case JCS_UNKNOWN:
-            for (int i = 0; i < cinfo.output_components; i++) {
-                this->image().SetChannelLabel(static_cast<unsigned int>(i), BitmapImage::CHANNEL_UNDEF);
-            }
-            break;
-        case JCS_GRAYSCALE:
-            for (int i = 0; i < cinfo.output_components; i++) {
-                this->image().SetChannelLabel(static_cast<unsigned int>(i), BitmapImage::CHANNEL_GRAY);
-            }
-            break;
-        case JCS_RGB:
-            if (this->image().GetChannelCount() == 3) {
-                this->image().SetChannelLabel(0, BitmapImage::CHANNEL_RED);
-                this->image().SetChannelLabel(1, BitmapImage::CHANNEL_GREEN);
-                this->image().SetChannelLabel(2, BitmapImage::CHANNEL_BLUE);
-            } else {
-                for (int i = 0; i < cinfo.output_components; i++) {
-                    this->image().SetChannelLabel(static_cast<unsigned int>(i), BitmapImage::CHANNEL_GRAY);
-                }
-            }
-            break;
-        case JCS_YCbCr: /* Y/Cb/Cr (also known as YUV) */
-            // not supported
-            for (int i = 0; i < cinfo.output_components; i++) {
-                this->image().SetChannelLabel(static_cast<unsigned int>(i), BitmapImage::CHANNEL_UNDEF);
-            }
-            break;
-        case JCS_CMYK:
-            if (this->image().GetChannelCount() == 4) {
-                this->image().SetChannelLabel(0, BitmapImage::CHANNEL_CYAN);
-                this->image().SetChannelLabel(1, BitmapImage::CHANNEL_MAGENTA);
-                this->image().SetChannelLabel(2, BitmapImage::CHANNEL_YELLOW);
-                this->image().SetChannelLabel(3, BitmapImage::CHANNEL_BLACK);
-            } else {
-                for (int i = 0; i < cinfo.output_components; i++) {
-                    this->image().SetChannelLabel(static_cast<unsigned int>(i), BitmapImage::CHANNEL_GRAY);
-                }
-            }
-            break;
-        case JCS_YCCK: /* Y/Cb/Cr/K */
-            // not supported
-            for (int i = 0; i < cinfo.output_components; i++) {
-                this->image().SetChannelLabel(static_cast<unsigned int>(i), BitmapImage::CHANNEL_UNDEF);
-            }
-            break;
-        default: // not supported for SURE
-            for (int i = 0; i < cinfo.output_components; i++) {
-                this->image().SetChannelLabel(static_cast<unsigned int>(i), BitmapImage::CHANNEL_UNDEF);
-            }
-            break;
+    
+    if (cinfo.out_color_space != JCS_RGB) {
+        ::jpeg_destroy_decompress(&cinfo);
+	throw vislib::Exception("jpeg decode out_color_space error", __FILE__, __LINE__);
     }
-
+    
     unsigned int row_stride = cinfo.output_width * cinfo.output_components;
+    o->data().enforce_size(cinfo.output_height * row_stride);
     while (cinfo.output_scanline < cinfo.output_height) {
-        JSAMPLE *ptr = this->image().PeekDataAs<JSAMPLE>() + row_stride * cinfo.output_scanline;
+        JSAMPLE *ptr = o->data().as_at<JSAMPLE>(row_stride * cinfo.output_scanline);
         ::jpeg_read_scanlines(&cinfo, &ptr, 1);
     }
-
-    if (cinfo.out_color_space == JCS_CMYK) {
-        this->image().Invert();
-    }
-
+    
     ::jpeg_finish_decompress(&cinfo);
     ::jpeg_destroy_decompress(&cinfo);
-#endif
-
-printf("Gackhere!\n");
-
-    THROW_THE_NOT_IMPLEMENTED_EXCEPTION;
-
-    /*
-    unsigned int w = o->metadata().as<data::image_buffer_metadata>()->width;
-    unsigned int h = o->metadata().as<data::image_buffer_metadata>()->height;
-
-    // decompress using zlib's inflate
-    int ret;
-    z_stream strm;
-
-    // allocate inflate state
-    strm.zalloc = Z_NULL;
-    strm.zfree = Z_NULL;
-    strm.opaque = Z_NULL;
-    strm.avail_in = 0;
-    strm.next_in = Z_NULL;
-    ret = inflateInit(&strm);
-    if (ret != Z_OK) throw the::exception(__FILE__, __LINE__);
-
-    strm.avail_in = data->data().size();
-    strm.next_in = data->data().as<unsigned char>();
-
-    o->data().assert_size(w * h * 3, true); // just to be sure
-
-    size_t pos = 0;
-    do {
-        strm.avail_out = o->data().size() - pos;
-        strm.next_out = o->data().as_at<unsigned char>(pos);
-            
-        ret = inflate(&strm, Z_NO_FLUSH);
-        if ((ret == Z_STREAM_ERROR)
-            || (ret == Z_NEED_DICT)
-            || (ret == Z_DATA_ERROR)
-            || (ret == Z_MEM_ERROR)) throw the::exception(the::text::astring_builder::format("zlib inflate error: %d", ret).c_str(), __FILE__, __LINE__);
-
-        pos += (o->data().size() - pos) - strm.avail_out;
-    } while (ret != Z_STREAM_END);
-
-    // clean up and return
-    inflateEnd(&strm);
 
     return o;
-    */
 }
 
 
