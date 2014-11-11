@@ -52,7 +52,7 @@ namespace _internal {
  * encoder::image_encoder_rgb_mjpeg::image_encoder_rgb_mjpeg
  */
 encoder::image_encoder_rgb_mjpeg::image_encoder_rgb_mjpeg(void)
-        : image_encoder_base(), quality(90) {
+        : image_encoder_base(), quality(99) {
     // intentionally empty
 }
 
