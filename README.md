@@ -5,6 +5,13 @@
 ```bash
 # sudo apt-get install zlib1g-dev uuid-dev cmake  # Release
 # sudo apt-get install libxmu-dev libxi-dev freeglut3-dev  # Debug/Tests
+#
+# for MJPEG support (libjpeg-turbo from http://libjpeg-turbo.virtualgl.org )
+# sudo apt-get install nasm
+#   download & install e.g. v1.3.1 from
+#   http://sourceforge.net/projects/libjpeg-turbo/files/
+# export CMAKE_PREFIX_PATH=<PATH_TO>/libjpeg-turbo-1.3.1:$CMAKE_PREFIX_PATH
+# export LD_LIBRARY_PATH=<PATH_TO>/libjpeg-turbo-1.3.1/lib:$LD_LIBRARY_PATH
 
 cd libs
 ./build.sh <INSTALL_PREFIX>
@@ -19,12 +26,6 @@ On some systems, you might have to export
 export CMAKE_PREFIX_PATH=/usr/lib/x86_64-linux-gnu/
 ```
 so `<uuid/uuid.h>` and other shared libs can be found.
-
-Use [libjpeg-turbo](http://libjpeg-turbo.virtualgl.org/) for `rgb_mjpeg` stream support with decent performance!
-```bash
-export CMAKE_PREFIX_PATH=<PATH_TO>/libjpeg-turbo-1.3.1:$CMAKE_PREFIX_PATH
-export LD_LIBRARY_PATH=<PATH_TO>/libjpeg-turbo-1.3.1/lib:$LD_LIBRARY_PATH
-```
 
 ## Set Env
 

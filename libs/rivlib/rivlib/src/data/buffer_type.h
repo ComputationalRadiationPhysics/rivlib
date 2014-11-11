@@ -18,8 +18,11 @@ namespace data {
         invalid,
         raw_rgb_bytes,
         raw_bgr_bytes,
-        zip_rgb_bytes,
+        zip_rgb_bytes
+#if(USE_MJPEG == 1)
+        ,
         mjpeg_rgb_bytes
+#endif
     };
 
 

@@ -180,6 +180,7 @@ std::vector<data_channel_info> provider_impl::query_channels(void) {
 
             rv.push_back(dci);
 
+#if(USE_MJPEG == 1)
             ptr = reinterpret_cast<uintptr_t>(dbs[i].get());
             ::memcpy(buf, &ptr, sizeof(uintptr_t));
             dci.name = the::text::string_utility::to_hex_astring(buf, sizeof(uintptr_t));
@@ -189,6 +190,7 @@ std::vector<data_channel_info> provider_impl::query_channels(void) {
             dci.quality = 24; // ok; compressed, some latency
 
             rv.push_back(dci);
+#endif
 
         }
 

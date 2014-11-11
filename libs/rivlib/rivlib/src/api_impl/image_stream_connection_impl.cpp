@@ -16,7 +16,9 @@
 #include "data/buffer_type.h"
 #include <sstream>
 #include "encoder/image_encoder_rgb_zip.h"
-#include "encoder/image_encoder_rgb_mjpeg.h"
+#if(USE_MJPEG == 1)
+#  include "encoder/image_encoder_rgb_mjpeg.h"
+#endif
 
 using namespace eu_vicci::rivlib;
 using namespace the::system::threading;
@@ -181,11 +183,13 @@ void image_stream_connection_impl::self_impl::communication_core(void) {
                         buf = codec.decode(buf);
 
                     } break;
+#if(USE_MJPEG == 1)
                     case data::buffer_type::mjpeg_rgb_bytes: {
                         static encoder::image_encoder_rgb_mjpeg codec; // uck
                         buf = codec.decode(buf);
 
                     } break;
+#endif
                     default:
                         throw the::exception("Data conversion is strange", __FILE__, __LINE__);
                         break;
@@ -339,6 +343,9 @@ error_log& image_stream_connection_impl::log(void) {
 bool image_stream_connection_impl::is_supported(data_channel_image_stream_subtype subtype) {
     return (subtype == data_channel_image_stream_subtype::rgb_raw)
         || (subtype == data_channel_image_stream_subtype::rgb_zip)
-        || (subtype == data_channel_image_stream_subtype::rgb_mjpeg);
+#if(USE_MJPEG == 1)
+        || (subtype == data_channel_image_stream_subtype::rgb_mjpeg)
+#endif
+        ;
     // TODO: support more ...
 }

@@ -5,6 +5,9 @@
  * Copyright TUD 2013
  * Alle Rechte vorbehalten. All rights reserved
  */
+
+#if(USE_MJPEG==1)
+
 #include "stdafx.h"
 #include "encoder/image_encoder_rgb_mjpeg.h"
 #include "data/buffer_type.h"
@@ -195,3 +198,6 @@ data::buffer::shared_ptr encoder::image_encoder_rgb_mjpeg::encode(data::buffer::
 
     return o;
 }
+
+#endif
+// if(USE_MJPEG==1) end

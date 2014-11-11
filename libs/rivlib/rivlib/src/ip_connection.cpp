@@ -13,7 +13,9 @@
 #include "api_impl/provider_impl.h"
 #include "encoder/image_encoder_rgb_raw.h"
 #include "encoder/image_encoder_rgb_zip.h"
-#include "encoder/image_encoder_rgb_mjpeg.h"
+#if(USE_MJPEG == 1)
+#  include "encoder/image_encoder_rgb_mjpeg.h"
+#endif
 #include "encoder/image_request.h"
 #include "thread_scrubber.h"
 #include "the/assert.h"
@@ -507,7 +509,10 @@ void ip_connection::data_chan_receiver(const std::string& path, const std::strin
         // TODO: Supported media types should be collected automatically
         if ((subtype != static_cast<uint16_t>(data_channel_image_stream_subtype::rgb_raw)) 
                 && (subtype != static_cast<uint16_t>(data_channel_image_stream_subtype::rgb_zip))
-                && (subtype != static_cast<uint16_t>(data_channel_image_stream_subtype::rgb_mjpeg)) ) {
+#if(USE_MJPEG == 1)
+                && (subtype != static_cast<uint16_t>(data_channel_image_stream_subtype::rgb_mjpeg))
+#endif
+           ) {
             unsigned short answer = 415; // Unsupported Media Type
             this->comm->Send(&answer, 2);
             throw the::exception("Unsupported media subtype requested", __FILE__, __LINE__);
@@ -521,9 +526,11 @@ void ip_connection::data_chan_receiver(const std::string& path, const std::strin
         case static_cast<uint16_t>(data_channel_image_stream_subtype::rgb_zip):
             encoder = new encoder::image_encoder_rgb_zip();
             break;
+#if(USE_MJPEG == 1)
         case static_cast<uint16_t>(data_channel_image_stream_subtype::rgb_mjpeg):
             encoder = new encoder::image_encoder_rgb_mjpeg();
             break;
+#endif
         default: {
             unsigned short answer = 415; // Unsupported Media Type
             this->comm->Send(&answer, 2);
