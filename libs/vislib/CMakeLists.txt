@@ -19,7 +19,11 @@ endif(CMAKE_SIZEOF_VOID_P EQUAL 8)
 
 
 # compiler options
-add_definitions(-std=c++11 -Wall -pedantic -ansi -fPIC -DUNIX -D_GNU_SOURCE -D_LIN${BITS} )
+if(GCC_VERSION VERSION_LESS 4.7)
+  add_definitions(-std=c++0x -Wall -pedantic -ansi -fPIC -DUNIX -D_GNU_SOURCE -D_LIN${BITS} )
+else()
+  add_definitions(-std=c++11 -Wall -pedantic -ansi -fPIC -DUNIX -D_GNU_SOURCE -D_LIN${BITS} )
+endif()
 
 find_package(UUID REQUIRED)
 
