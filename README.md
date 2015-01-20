@@ -10,8 +10,9 @@
 # sudo apt-get install nasm
 #   download & install e.g. v1.3.1 from
 #   http://sourceforge.net/projects/libjpeg-turbo/files/
-# export CMAKE_PREFIX_PATH=<PATH_TO>/libjpeg-turbo-1.3.1:$CMAKE_PREFIX_PATH
-# export LD_LIBRARY_PATH=<PATH_TO>/libjpeg-turbo-1.3.1/lib:$LD_LIBRARY_PATH
+# export PNGTURBO_ROOT=<PATH_TO>/libjpeg-turbo-1.3.1
+# export CMAKE_PREFIX_PATH=$PNGTURBO_ROOT:$CMAKE_PREFIX_PATH
+# export LD_LIBRARY_PATH=$PNGTURBO_ROOT/lib:$LD_LIBRARY_PATH
 
 cd libs
 ./build.sh <INSTALL_PREFIX>
@@ -23,7 +24,7 @@ cd rivlib/release
 
 On some systems, you might have to export
 ```bash
-export CMAKE_PREFIX_PATH=/usr/lib/x86_64-linux-gnu/
+export CMAKE_PREFIX_PATH=/usr/lib/x86_64-linux-gnu:$CMAKE_PREFIX_PATH
 ```
 so `<uuid/uuid.h>` and other shared libs can be found.
 
