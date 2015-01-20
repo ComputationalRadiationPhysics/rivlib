@@ -1,9 +1,6 @@
-TheLib (http://thelib.org/) is a continously growing repository of utility and
-convenience classes for C++ and C#. The name is for Totally Helpful Extension
-classes for C++/C#.
+TheLib (http://thelib.sourceforge.net/index.php/TheLib) is a repository of utility and convenience classes
+for C++ and C#. The name is for Totally Helpful Extension classes for C++/C#.
 
-TheLib is Freeware under the Modified BSD License. See
-http://www.thelib.org/index.php?title=TheLib:License
+TheLib is Freeware under the BSD 3-Clause License. See
+http://thelib.sourceforge.net/index.php/TheLib
 for more information.
-
-TODO: Add explanation of subfolders here

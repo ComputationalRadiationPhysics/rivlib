@@ -1,7 +1,11 @@
 
 Remote Interactive Visualization
-Copyright TUD 2013, VICCI
-Alle Rechte vorbehalten. All rights reserved
+Copyright TUD 2013-2014, VICCI (http://www.vicci.eu/)
+Alle Rechte vorbehalten.
+All rights reserved.
+cf. license.txt
+
+http://www.vicci.eu/projektergebnisse/projektergebnisse-ap4-interaktive-echtzeitvisualisierung-und-analyse/?lang=en
 
 Setup:
 Linux:
