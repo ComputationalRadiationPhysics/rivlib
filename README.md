@@ -34,3 +34,10 @@ export RIVLIB_ROOT=<INSTALL_PREFIX>
 export VISLIB_ROOT=$RIVLIB_ROOT
 export THELIB_ROOT=$RIVLIB_ROOT
 ```
+
+## Licenses
+
+This repository contains `rivlib` and snapshots of the libraries
+[thelib++](http://thelib.sourceforge.net/index.php/TheLib) and
+[vislib](https://svn.vis.uni-stuttgart.de/trac/vislib).
+The according licenses are listed in `libs/<name>`.
