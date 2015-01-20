@@ -43,6 +43,69 @@ data::buffer::shared_ptr encoder::image_encoder_rgb_zip::decode(data::buffer::sh
     o->set_type(data::buffer_type::raw_rgb_bytes);
     o->metadata() = data->metadata();
 
+    unsigned int frameWidth = data->metadata().as<data::image_buffer_metadata>()->width;
+    unsigned int frameHeight = data->metadata().as<data::image_buffer_metadata>()->height;
+
+    if(frameWidth!=_frameWidth || frameHeight!=_frameHeight)
+    {
+      _frameWidth = (int)frameWidth;
+      _frameHeight = (int)frameHeight;
+
+      avcodec_register_all();
+      av_init_packet(&pkt);
+
+      codec = avcodec_find_decoder(AV_CODEC_ID_H264);
+      if(!codec) {
+	  printf("Error: cannot find the h264 codec\n");
+	  return false;
+      }
+
+      codec_context = avcodec_alloc_context3(codec);
+      if(avcodec_open2(codec_context, codec, NULL) < 0) {
+	  printf("Error: could not open codec.\n");
+	  return false;
+      }
+
+      parser = av_parser_init(AV_CODEC_ID_H264);
+      if(!parser) {
+	printf("Erorr: cannot create H264 parser.\n");
+	return false;
+      }
+
+      frame = avcodec_alloc_frame();
+      std::copy((data->data().as<unsigned char>()),(data->data().as<unsigned char>()) + data->data().size() , std::back_inserter(buffer));
+      dec_convertCtx = sws_getContext(frameWidth, frameHeight, AV_PIX_FMT_YUV420P, frameWidth, frameHeight, AV_PIX_FMT_RGB24, SWS_BILINEAR, NULL, NULL, NULL);
+    }
+
+    std::copy((data->data().as<unsigned char>()),(data->data().as<unsigned char>()) + data->data().size() , std::back_inserter(buffer));
+
+    int len = 0;
+    int dec_bytes = 0;
+    int got_frame = 0;
+
+    pkt.data = NULL;
+    pkt.size = 0;
+
+    len = av_parser_parse2(parser, codec_context, &pkt.data, &pkt.size, &buffer[0], buffer.size(), 0, 0, AV_NOPTS_VALUE);
+    if(len && pkt.size )
+	dec_bytes = avcodec_decode_video2(codec_context, frame, &got_frame, &pkt);
+
+    if(got_frame&&dec_bytes){
+	AVPicture picture;
+	avpicture_alloc(&picture, AV_PIX_FMT_RGB24, frame->width, frame->height);
+
+	int scale = sws_scale(dec_convertCtx, frame->data, frame->linesize, 0, frame->height, picture.data, picture.linesize);
+	o->data().assert_size(frame->height*frame->width*3);
+	memcpy((o->data().as<unsigned char>()),picture.data[0], frame->height*frame->width*3);
+	buffer.erase(buffer.begin(), buffer.begin() + len);
+	avpicture_free(&picture);
+    }
+
+    /*
+    o->set_time_code(data->time_code());
+    o->set_type(data::buffer_type::raw_rgb_bytes);
+    o->metadata() = data->metadata();
+
     unsigned int w = o->metadata().as<data::image_buffer_metadata>()->width;
     unsigned int h = o->metadata().as<data::image_buffer_metadata>()->height;
 
@@ -68,7 +131,7 @@ data::buffer::shared_ptr encoder::image_encoder_rgb_zip::decode(data::buffer::sh
     do {
         strm.avail_out = o->data().size() - pos;
         strm.next_out = o->data().as_at<unsigned char>(pos);
-            
+
         ret = inflate(&strm, Z_NO_FLUSH);
         if ((ret == Z_STREAM_ERROR)
             || (ret == Z_NEED_DICT)
@@ -80,6 +143,7 @@ data::buffer::shared_ptr encoder::image_encoder_rgb_zip::decode(data::buffer::sh
 
     // clean up and return
     inflateEnd(&strm);
+    */
 
     return o;
 }
@@ -92,6 +156,67 @@ data::buffer::shared_ptr encoder::image_encoder_rgb_zip::encode(data::buffer::sh
     if (data == nullptr) return nullptr;
     data::buffer::shared_ptr o = data::buffer::create();
 
+    if (data->type() == data::buffer_type::raw_bgr_bytes) {
+        data::image_buffer_metadata *ibm = data->metadata().as<data::image_buffer_metadata>();
+        unsigned int cnt = ibm->width * ibm->height;
+        unsigned char *d = data->data().as<unsigned char>();
+        for (unsigned int i = 0; i < cnt; i++, d += 3) {
+            std::swap(d[0], d[2]);
+        }
+        data->set_type(data::buffer_type::raw_rgb_bytes);
+    }
+
+    o->set_time_code(data->time_code());
+    o->set_type(data::buffer_type::zip_rgb_bytes);
+    o->metadata() = data->metadata();
+
+    unsigned int frameWidth  = data->metadata().as<data::image_buffer_metadata>()->width;
+    unsigned int frameHeight = data->metadata().as<data::image_buffer_metadata>()->height;
+
+    // init encoder on first frame or when size changed
+    if(frameWidth!=_frameWidth || frameHeight!=_frameHeight)
+    {
+      _frameWidth = (int)frameWidth;
+      _frameHeight = (int)frameHeight;
+
+      x264_param_default_preset(&param, "veryfast", "zerolatency");
+      x264_param_apply_profile(&param, "baseline");
+
+      param.i_threads = 1;
+      param.i_width = frameWidth;
+      param.i_height = frameHeight;
+      param.i_keyint_max = 15;
+      param.b_intra_refresh = 1;
+      param.rc.i_rc_method = X264_RC_CRF;
+      param.rc.f_rf_constant = 25;
+      param.rc.f_rf_constant_max = 35;
+
+      encoder = x264_encoder_open(&param);
+
+      picIn = new x264_picture_t;
+      picOut = new x264_picture_t;
+
+      x264_picture_alloc(picIn, X264_CSP_I420, frameWidth, frameHeight);
+      x264_encoder_parameters(encoder, &param);
+      enc_convertCtx = sws_getContext(frameWidth, frameHeight, AV_PIX_FMT_RGB24, frameWidth, frameHeight, AV_PIX_FMT_YUV420P, SWS_FAST_BILINEAR, NULL, NULL, NULL);
+
+      iNals = 0;
+      nals = NULL;
+    }
+
+    uint8_t *inData[1] = {data->data().as<unsigned char>() };
+    int inLinesize[1] = { 3*(int)frameWidth };
+
+    sws_scale(enc_convertCtx, inData, inLinesize, 0, frameHeight, picIn->img.plane, picIn->img.i_stride);
+
+    int enc_bytes = x264_encoder_encode(encoder, &nals, &iNals, picIn, picOut);
+
+    if(enc_bytes){
+	o->data().assert_size(enc_bytes);
+	memcpy((o->data().as<unsigned char>()),nals[0].p_payload, enc_bytes);
+    }
+
+    /*
     if (data->type() == data::buffer_type::raw_bgr_bytes) {
         data::image_buffer_metadata *ibm = data->metadata().as<data::image_buffer_metadata>();
         unsigned int cnt = ibm->width * ibm->height;
@@ -149,6 +274,7 @@ data::buffer::shared_ptr encoder::image_encoder_rgb_zip::encode(data::buffer::sh
     // TODO: This makes all the effort before obsolete.
     //  We will change this on store an explicit "valid_size" for the data block as a whole when refactoring the buffer class.
     o->data().enforce_size(pos, true);
+    */
 
     return o;
 }

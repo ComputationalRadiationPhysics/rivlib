@@ -170,6 +170,8 @@ std::vector<data_channel_info> provider_impl::query_channels(void) {
 
             rv.push_back(dci);
 
+            // replaced by ffmpeg implementation
+            /*
             ptr = reinterpret_cast<uintptr_t>(dbs[i].get());
             ::memcpy(buf, &ptr, sizeof(uintptr_t));
             dci.name = the::text::string_utility::to_hex_astring(buf, sizeof(uintptr_t));
@@ -179,6 +181,7 @@ std::vector<data_channel_info> provider_impl::query_channels(void) {
             dci.quality = 16; // not good; compressed, but high latency
 
             rv.push_back(dci);
+            */
 
 #if(USE_MJPEG == 1)
             ptr = reinterpret_cast<uintptr_t>(dbs[i].get());
@@ -192,6 +195,16 @@ std::vector<data_channel_info> provider_impl::query_channels(void) {
             rv.push_back(dci);
 #endif
 
+            // now uses ffmpeg
+            ptr = reinterpret_cast<uintptr_t>(dbs[i].get());
+            ::memcpy(buf, &ptr, sizeof(uintptr_t));
+            dci.name = the::text::string_utility::to_hex_astring(buf, sizeof(uintptr_t));
+
+            dci.type = data_channel_type::image_stream;
+            dci.subtype.image_stream = data_channel_image_stream_subtype::rgb_zip;
+            dci.quality = 32;
+
+            rv.push_back(dci);
         }
 
     }
