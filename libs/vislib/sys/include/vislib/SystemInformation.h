@@ -13,7 +13,7 @@
 #pragma managed(push, off)
 #endif /* defined(_WIN32) && defined(_MANAGED) */
 
-#ifndef _WIN32
+#if (!defined(_WIN32) && defined(USE_X11))
 #include <X11/Xlib.h>
 #endif /* !_WIN32 */
 
@@ -346,7 +346,7 @@ namespace sys {
             HDC hdcMonitor, LPRECT lprcMonitor, LPARAM dwData);
 #endif /* _WIN32 */
 
-#ifndef _WIN32
+#if (!defined(_WIN32) && defined(USE_X11))
         /**
          * Open the root window of the specified X11 screen and answer its 
          * location and dimension.

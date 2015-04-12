@@ -9,12 +9,14 @@
 #include "vislib/MessageBox.h"
 #include "vislib/IllegalStateException.h"
 #include "vislib/MissingImplementationException.h"
-#ifndef _WIN32
+#if (!defined(_WIN32) && defined(USE_X11))
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #include <X11/Xos.h>
 #include <X11/keysym.h>
 #include <X11/keysymdef.h>
+#endif
+#ifndef _WIN32
 #include <stdio.h>
 #include <stdlib.h>
 #endif /* !_WIN32 */
@@ -31,7 +33,7 @@
 #endif /* _WIN32 */
 
 
-#ifndef _WIN32
+#if (!defined(_WIN32) && defined(USE_X11))
 namespace vislib {
 namespace sys {
 namespace MessageBoxLinuxUtils {
@@ -997,7 +999,8 @@ vislib::sys::MessageBox::ShowDialog(void) {
         default: this->retval = RET_NONE; break;
     }
 
-#else /* _WIN32 */
+#endif
+#if (!defined(_WIN32) && defined(USE_X11))
 
     Display *display;           // the display
     int screen;                 // the screen
