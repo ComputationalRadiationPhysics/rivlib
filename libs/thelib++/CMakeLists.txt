@@ -35,6 +35,8 @@ project(TheLib)
 
 # set(CMAKE_VERBOSE_MAKEFILE ON)
 
+find_package(X11)
+
 # Gather header files and store the result in the variable header_files
 # Find the files relative to the directory of this cmake file
 file(GLOB_RECURSE header_files RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" "include/*.h")
@@ -63,6 +65,11 @@ list(REMOVE_ITEM source_files
 	"src/system/net/simple_message_dispatcher.cpp"
 	)
 
+if(NOT X11_FOUND)
+    list(REMOVE_ITEM source_files
+         "src/graphics/x11_window_behaviour.cpp"
+        )
+endif()
 
 # Set the include directory to point to the subdirectory "include"
 include_directories("include")

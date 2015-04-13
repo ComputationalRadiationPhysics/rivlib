@@ -193,8 +193,8 @@ DWORD vislib::sys::SystemInformation::MonitorRects(
             reinterpret_cast<LPARAM>(&outMonitorRects))) {
         throw SystemException(__FILE__, __LINE__);
     }
-
-#else /* _WIN32 */
+#endif
+#if (!defined(_WIN32) && defined(USE_X11))
     int cntScreens = 0;         // # of attached screens.
     Display *dpy = NULL;        // The display.
     StringA errorDesc;          // For formatting an error message.
@@ -309,7 +309,8 @@ vislib::sys::SystemInformation::PrimaryMonitorRect(void) {
         throw SystemException(ERROR_NOT_FOUND, __FILE__, __LINE__);
     }
 
-#else /* _WIN32 */
+#endif
+#if (!defined(_WIN32) && defined(USE_X11))
     Display *dpy = NULL;
     StringA errorDesc;
 
@@ -650,7 +651,7 @@ BOOL CALLBACK vislib::sys::SystemInformation::calcVirtualScreenProc(
 #endif /* _WIN32 */
 
 
-#ifndef _WIN32
+#if (!defined(_WIN32) && defined(USE_X11))
 /*
  * vislib:sys::SystemInformation::getRootWndRect
  */

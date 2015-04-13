@@ -10,7 +10,12 @@ endif()
 
 set(CMAKE_THREAD_PREFER_PTHREAD)
 find_package(Threads REQUIRED)
-find_package(X11 REQUIRED)
+
+find_package(X11)
+if(X11_FOUND)
+    add_definitions(-DUSE_X11)
+endif(X11_FOUND)
+
 find_package(Curses REQUIRED)
 
 
@@ -32,6 +37,7 @@ include_directories("include" "src"
 
 # target definition
 add_library(vislibsys${BITS} STATIC ${header_files} ${source_files})
-target_link_libraries(vislibsys${BITS} ${CMAKE_THREAD_LIBS_INIT} ${X11_LIBRARIES} ${CURSES_LIBRARIES} -lrt -lcrypt)
+target_link_libraries(vislibsys${BITS} ${CMAKE_THREAD_LIBS_INIT} ${CURSES_LIBRARIES} -lrt -lcrypt)
+#target_link_libraries(vislibsys${BITS} ${CMAKE_THREAD_LIBS_INIT} ${X11_LIBRARIES} ${CURSES_LIBRARIES} -lrt -lcrypt)
 
 
