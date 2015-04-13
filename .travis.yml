@@ -1,0 +1,30 @@
+language: cpp
+
+os:
+  - linux
+#  - osx # see if available http://docs.travis-ci.com/user/multi-os/
+
+compiler:
+  - gcc
+# - clang # crashes
+
+env:
+  global:
+    - XLIBS="libxmu-dev libxi-dev freeglut3-dev libx11-dev"
+  matrix:
+    - X11_ON=1
+    - X11_ON=0
+
+script:
+  - cd $TRAVIS_BUILD_DIR/libs
+  - ./build.sh
+  - cd rivlib/release
+  - sudo make install
+
+before_script:
+  - uname -r
+  - lsb_release -a
+  - echo "$TRAVIS_BUILD_DIR"
+  - ls -hal $TRAVIS_BUILD_DIR
+  - sudo apt-get install zlib1g-dev uuid-dev
+  - if [ $X11_ON -eq 1 ]; then sudo apt-get install $XLIBS; else sudo apt-get remove $XLIBS; fi
