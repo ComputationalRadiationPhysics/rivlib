@@ -80,6 +80,8 @@ namespace sys {
                 reinterpret_cast<volatile LONG *>(address), 
                 static_cast<LONG>(exchange),
                 static_cast<LONG>(comparand));
+#elif defined(__GNUC__) || defined(__GNUG__)
+            return  __sync_val_compare_and_swap(address, comparand,exchange);
 #else /* _WIN32 */
             INT32 retval;
             __asm__ __volatile__ ("lock; cmpxchgl %2, %0"
@@ -277,6 +279,8 @@ namespace sys {
             return ::InterlockedExchangeAdd(
                 reinterpret_cast<volatile LONG *>(address),
                 static_cast<LONG>(value));
+#elif defined(__GNUC__) || defined(__GNUG__)
+            return  __sync_fetch_and_add(address, value); 
 #else /* _WIN32 */
             INT32 retval;
             __asm__ __volatile__("lock; xaddl %0, %1"
